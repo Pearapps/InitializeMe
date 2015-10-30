@@ -39,7 +39,6 @@ static inline BOOL isRangeValid(NSRange range) {
     else if ([self.propertyString containsString:@"let "] || [self.propertyString containsString:@"var "]) {
         _propertyType = PropertyTypeSwift;
     }
-
     
     if (_propertyType == PropertyTypeObjectiveC) {
         NSRange range = [self.propertyString rangeOfString:@"("];
@@ -56,7 +55,15 @@ static inline BOOL isRangeValid(NSRange range) {
             }
         }
         
-        NSRange endOfQualifiers = [self.propertyString rangeOfString:@") "];
+        NSRange endOfQualifiers = ^NSRange {
+            return [self.propertyString rangeOfString:@") "];
+
+            if (!self.qualifiers) {
+                return [self.propertyString rangeOfString:@" "];
+            }
+            else {
+            }
+        }();
 
         if (isRangeValid(endOfQualifiers)) {
             NSString *substringOfRange = [[[self.propertyString substringFromIndex:endOfQualifiers.location] stringByReplacingOccurrencesOfString:@") " withString:@""] stringByReplacingOccurrencesOfString:@";" withString:@""];

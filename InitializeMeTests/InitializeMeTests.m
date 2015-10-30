@@ -16,6 +16,30 @@
 
 @implementation InitializeMeTests
 
+- (void)testNoParenthesis {
+    NSString *expectedOutput = @"- (nonnull instancetype)initWithWindow:(nonnull NSWindow *)window ello:(NSWindow *)ello {\n"
+    "\tself = [super init];\n"
+    "\tNSParameterAssert(window);\n"
+    "\n"
+    "\t_window = window;\n"
+    "\t_ello = [ello copy];\n"
+    "\n"
+    "\treturn self;\n"
+    "}";
+    
+    NSString *input = @"@property NSWindow *window;\n@property NSWindow *ello;";
+    
+    id properties = [[[PropertyParser alloc] initWithString:input] properties];
+    
+    
+    [properties makeObjectsPerformSelector:@selector(parse)];
+    
+    
+    NSString *output = [[KAInitializerWriterFactory initializerWriterForProperties:properties] initializer];
+    
+    XCTAssert([output isEqualToString:expectedOutput]);
+}
+
 - (void)testBasicOneNullabilityAndOneNot {
     
     NSString *expectedOutput = @"- (nonnull instancetype)initWithWindow:(nonnull NSWindow *)window ello:(NSWindow *)ello {\n"
