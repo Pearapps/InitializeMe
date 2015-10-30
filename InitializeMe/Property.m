@@ -55,28 +55,33 @@ static inline BOOL isRangeValid(NSRange range) {
             }
         }
         
+        BOOL hasQualifiers = self.qualifiers != nil;
+        
         NSRange endOfQualifiers = ^NSRange {
-            return [self.propertyString rangeOfString:@") "];
-
-            if (!self.qualifiers) {
+            if (!hasQualifiers) {
                 return [self.propertyString rangeOfString:@" "];
             }
             else {
+                return [self.propertyString rangeOfString:@") "];
             }
         }();
 
         if (isRangeValid(endOfQualifiers)) {
             NSString *substringOfRange = [[[self.propertyString substringFromIndex:endOfQualifiers.location] stringByReplacingOccurrencesOfString:@") " withString:@""] stringByReplacingOccurrencesOfString:@";" withString:@""];
             
+            if (!hasQualifiers) {
+                substringOfRange = [substringOfRange substringFromIndex:1];
+            }
+            
             NSRange range = [substringOfRange rangeOfString:@"*" options:NSBackwardsSearch];
             NSRange rangeEndingOfAngleBracket = [substringOfRange rangeOfString:@">" options:NSBackwardsSearch];
-            
+                        
             if ([substringOfRange containsString:@"*"] && (!isRangeValid(rangeEndingOfAngleBracket) || range.location > rangeEndingOfAngleBracket.location)) {
                 _hasPointer = YES;
             }
                 
             if (_hasPointer) {
-                _variable = [substringOfRange substringFromIndex:range.location+1];
+                _variable = [substringOfRange substringFromIndex:range.location + 1];
                 _type = [substringOfRange substringToIndex:range.location];
             }
             else {

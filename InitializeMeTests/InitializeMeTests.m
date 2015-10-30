@@ -17,12 +17,14 @@
 @implementation InitializeMeTests
 
 - (void)testNoParenthesis {
-    NSString *expectedOutput = @"- (nonnull instancetype)initWithWindow:(nonnull NSWindow *)window ello:(NSWindow *)ello {\n"
+    NSString *expectedOutput = @"- (instancetype)initWithWindow:(NSWindow *)window ello:(NSWindow *)ello {\n"
     "\tself = [super init];\n"
-    "\tNSParameterAssert(window);\n"
     "\n"
-    "\t_window = window;\n"
-    "\t_ello = [ello copy];\n"
+    "\tif (self) {\n"
+    "\t\t_window = window;\n"
+    "\t\t_ello = ello;\n"
+    "\t}"
+    "\n"
     "\n"
     "\treturn self;\n"
     "}";
@@ -31,23 +33,24 @@
     
     id properties = [[[PropertyParser alloc] initWithString:input] properties];
     
-    
     [properties makeObjectsPerformSelector:@selector(parse)];
     
-    
     NSString *output = [[KAInitializerWriterFactory initializerWriterForProperties:properties] initializer];
-    
+
     XCTAssert([output isEqualToString:expectedOutput]);
 }
 
 - (void)testBasicOneNullabilityAndOneNot {
     
     NSString *expectedOutput = @"- (nonnull instancetype)initWithWindow:(nonnull NSWindow *)window ello:(NSWindow *)ello {\n"
-    "\tself = [super init];\n"
     "\tNSParameterAssert(window);\n"
+    "\tself = [super init];\n"
     "\n"
-    "\t_window = window;\n"
-    "\t_ello = [ello copy];\n"
+    "\tif (self) {\n"
+    "\t\t_window = window;\n"
+    "\t\t_ello = [ello copy];\n"
+    "\t}"
+    "\n"
     "\n"
     "\treturn self;\n"
     "}";
@@ -67,10 +70,13 @@
 
 - (void)testProtocols {
     NSString *expectedOutput = @"- (nonnull instancetype)initWithChain:(id <Chain>)chain {\n"
-    "\tself = [super init];\n"
     "\tNSParameterAssert(chain);\n"
+    "\tself = [super init];\n"
     "\n"
-    "\t_chain = chain;\n"
+    "\tif (self) {\n"
+    "\t\t_chain = chain;\n"
+    "\t}"
+    "\n"
     "\n"
     "\treturn self;\n"
     "}";
@@ -83,15 +89,20 @@
     
     NSString *output = [[KAInitializerWriterFactory initializerWriterForProperties:properties] initializer];
     
+
+
     XCTAssert([output isEqualToString:expectedOutput]);
 }
 
 - (void)testingGenerics {
     NSString *expectedOutput = @"- (nonnull instancetype)initWithWindow:(nonnull NSArray <NSArray <NSString *>*> *)window {\n"
-    "\tself = [super init];\n"
     "\tNSParameterAssert(window);\n"
+    "\tself = [super init];\n"
     "\n"
-    "\t_window = window;\n"
+    "\tif (self) {\n"
+    "\t\t_window = window;\n"
+    "\t}"
+    "\n"
     "\n"
     "\treturn self;\n"
     "}";
@@ -103,6 +114,7 @@
     [properties makeObjectsPerformSelector:@selector(parse)];
     
     NSString *output = [[KAInitializerWriterFactory initializerWriterForProperties:properties] initializer];
+
     
     XCTAssert([output isEqualToString:expectedOutput]);
 }
