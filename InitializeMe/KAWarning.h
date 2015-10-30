@@ -16,7 +16,7 @@ typedef NS_ENUM(NSUInteger, WarningLevel) {
 
 @interface KAWarning : NSObject
 
-@property (nonatomic, readonly, nonnull) NSString *reason;
+@property (nonatomic, readonly, copy, nonnull) NSString *reason;
 @property (nonatomic, readonly) WarningLevel warningLevel;
 
 - (nonnull instancetype)initWithReason:(nonnull NSString *)reason warningLevel:(WarningLevel)warningLevel;

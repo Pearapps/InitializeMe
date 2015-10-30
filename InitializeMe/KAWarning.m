@@ -15,7 +15,7 @@
     self = [super init];
     
     if (self) {
-        _reason = reason;
+        _reason = [reason copy];
         _warningLevel = warningLevel;
     }
     
