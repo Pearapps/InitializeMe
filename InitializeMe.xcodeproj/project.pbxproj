@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B91743001BE31A8D005477FF /* KAWarning.m in Sources */ = {isa = PBXBuildFile; fileRef = B91742FF1BE31A8D005477FF /* KAWarning.m */; };
 		B91743031BE31F07005477FF /* KAWarning+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B91743021BE31F07005477FF /* KAWarning+Properties.m */; };
+		B91743051BE3252B005477FF /* KAWarningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B91743041BE3252B005477FF /* KAWarningTests.m */; };
 		B95EAEF21BE03EA900EE1528 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAEF11BE03EA900EE1528 /* AppDelegate.m */; };
 		B95EAEF51BE03EA900EE1528 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAEF41BE03EA900EE1528 /* main.m */; };
 		B95EAEF71BE03EA900EE1528 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B95EAEF61BE03EA900EE1528 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		B91742FF1BE31A8D005477FF /* KAWarning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAWarning.m; sourceTree = "<group>"; };
 		B91743011BE31F07005477FF /* KAWarning+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KAWarning+Properties.h"; sourceTree = "<group>"; };
 		B91743021BE31F07005477FF /* KAWarning+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KAWarning+Properties.m"; sourceTree = "<group>"; };
+		B91743041BE3252B005477FF /* KAWarningTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAWarningTests.m; sourceTree = "<group>"; };
 		B95EAEED1BE03EA900EE1528 /* InitializeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InitializeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B95EAEF01BE03EA900EE1528 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B95EAEF11BE03EA900EE1528 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				B95EAF1D1BE05DCA00EE1528 /* InitializeMeTests.m */,
+				B91743041BE3252B005477FF /* KAWarningTests.m */,
 				B95EAF1F1BE05DCA00EE1528 /* Info.plist */,
 			);
 			path = InitializeMeTests;
@@ -311,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B91743051BE3252B005477FF /* KAWarningTests.m in Sources */,
 				B95EAF1E1BE05DCA00EE1528 /* InitializeMeTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
