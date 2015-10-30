@@ -28,4 +28,14 @@
     }];
 }
 
++ (NSArray <id> *)flattenArray:(NSArray<NSArray<id> *> *)array {
+    NSMutableArray *returnArray = [NSMutableArray new];
+    for (NSArray <id>* arr in array) {
+        for (id object in arr) {
+            [returnArray addObject:object];
+        }
+    }
+    return [returnArray copy];
+}
+
 @end

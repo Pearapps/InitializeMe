@@ -12,4 +12,6 @@
 
 @interface KAWarning (Properties)
 
++ (NSArray <KAWarning *> *)warningForProperty:(Property *)property;
+
 @end

@@ -10,11 +10,22 @@
 
 @implementation KAWarning (Properties)
 
-+ (KAWarning *)warningForProperty:(Property *)property {
++ (NSArray <KAWarning *> *)warningForProperty:(Property *)property {
+    NSMutableArray <KAWarning *>*warnings = [NSMutableArray new];
     
+    if (![property.qualifiers containsObject:@"copy"] && [@[@"NSString", @"NSArray", @"NSDictionary"] containsObject:property.type]) {
+        [warnings addObject:[[KAWarning alloc] initWithReason:@"You should add copy to this property." warningLevel:WarningLevelMedium]];
+    }
     
+    if (![property.qualifiers containsObject:@"readonly"]) {
+        [warnings addObject:[[KAWarning alloc] initWithReason:@"Property is mutable." warningLevel:WarningLevelLow]];
+    }
     
-    return nil;
+    if (![property.qualifiers containsObject:@"nonatomic"]) {
+        [warnings addObject:[[KAWarning alloc] initWithReason:@"Property is atomic." warningLevel:WarningLevelLow]];
+    }
+    
+    return [warnings copy];
 }
 
 @end

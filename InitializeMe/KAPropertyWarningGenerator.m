@@ -8,6 +8,7 @@
 
 #import "KAPropertyWarningGenerator.h"
 #import "NSArray+Extensions.h"
+#import "KAWarning+Properties.h"
 
 @interface KAPropertyWarningGenerator ()
 
@@ -29,9 +30,9 @@
 }
 
 - (NSArray <KAWarning *> *)warnings {
-    return [self.properties transformedArrayWithBlock:^id(Property *property) {
-        return nil;
-    }];
+    return [NSArray flattenArray:[self.properties transformedArrayWithBlock:^id(Property *property) {
+        return [KAWarning warningForProperty:property];
+    }]];
 }
 
 @end
