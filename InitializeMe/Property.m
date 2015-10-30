@@ -39,7 +39,6 @@ static inline BOOL isRangeValid(NSRange range) {
     else if ([self.propertyString containsString:@"let "] || [self.propertyString containsString:@"var "]) {
         _propertyType = PropertyTypeSwift;
     }
-
     
     if (_propertyType == PropertyTypeObjectiveC) {
         NSRange range = [self.propertyString rangeOfString:@"("];
@@ -56,20 +55,33 @@ static inline BOOL isRangeValid(NSRange range) {
             }
         }
         
-        NSRange endOfQualifiers = [self.propertyString rangeOfString:@") "];
+        BOOL hasQualifiers = self.qualifiers != nil;
+        
+        NSRange endOfQualifiers = ^NSRange {
+            if (!hasQualifiers) {
+                return [self.propertyString rangeOfString:@" "];
+            }
+            else {
+                return [self.propertyString rangeOfString:@") "];
+            }
+        }();
 
         if (isRangeValid(endOfQualifiers)) {
             NSString *substringOfRange = [[[self.propertyString substringFromIndex:endOfQualifiers.location] stringByReplacingOccurrencesOfString:@") " withString:@""] stringByReplacingOccurrencesOfString:@";" withString:@""];
             
+            if (!hasQualifiers) {
+                substringOfRange = [substringOfRange substringFromIndex:1];
+            }
+            
             NSRange range = [substringOfRange rangeOfString:@"*" options:NSBackwardsSearch];
             NSRange rangeEndingOfAngleBracket = [substringOfRange rangeOfString:@">" options:NSBackwardsSearch];
-            
+                        
             if ([substringOfRange containsString:@"*"] && (!isRangeValid(rangeEndingOfAngleBracket) || range.location > rangeEndingOfAngleBracket.location)) {
                 _hasPointer = YES;
             }
                 
             if (_hasPointer) {
-                _variable = [substringOfRange substringFromIndex:range.location+1];
+                _variable = [substringOfRange substringFromIndex:range.location + 1];
                 _type = [substringOfRange substringToIndex:range.location];
             }
             else {
