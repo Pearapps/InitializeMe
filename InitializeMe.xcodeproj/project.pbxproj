@@ -10,6 +10,8 @@
 		B91743001BE31A8D005477FF /* KAWarning.m in Sources */ = {isa = PBXBuildFile; fileRef = B91742FF1BE31A8D005477FF /* KAWarning.m */; };
 		B91743031BE31F07005477FF /* KAWarning+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B91743021BE31F07005477FF /* KAWarning+Properties.m */; };
 		B91743051BE3252B005477FF /* KAWarningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B91743041BE3252B005477FF /* KAWarningTests.m */; };
+		B91743081BE3296B005477FF /* WarningsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B91743071BE3296B005477FF /* WarningsViewController.m */; };
+		B917430B1BE32A9C005477FF /* ApplicationCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = B917430A1BE32A9C005477FF /* ApplicationCoordinator.m */; };
 		B95EAEF21BE03EA900EE1528 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAEF11BE03EA900EE1528 /* AppDelegate.m */; };
 		B95EAEF51BE03EA900EE1528 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAEF41BE03EA900EE1528 /* main.m */; };
 		B95EAEF71BE03EA900EE1528 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B95EAEF61BE03EA900EE1528 /* Assets.xcassets */; };
@@ -41,6 +43,10 @@
 		B91743011BE31F07005477FF /* KAWarning+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KAWarning+Properties.h"; sourceTree = "<group>"; };
 		B91743021BE31F07005477FF /* KAWarning+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KAWarning+Properties.m"; sourceTree = "<group>"; };
 		B91743041BE3252B005477FF /* KAWarningTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAWarningTests.m; sourceTree = "<group>"; };
+		B91743061BE3296B005477FF /* WarningsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarningsViewController.h; sourceTree = "<group>"; };
+		B91743071BE3296B005477FF /* WarningsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarningsViewController.m; sourceTree = "<group>"; };
+		B91743091BE32A9C005477FF /* ApplicationCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationCoordinator.h; sourceTree = "<group>"; };
+		B917430A1BE32A9C005477FF /* ApplicationCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationCoordinator.m; sourceTree = "<group>"; };
 		B95EAEED1BE03EA900EE1528 /* InitializeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InitializeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B95EAEF01BE03EA900EE1528 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B95EAEF11BE03EA900EE1528 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -111,8 +117,12 @@
 				B95EAF451BE08DEC00EE1528 /* MainMenu.xib */,
 				B95EAEF01BE03EA900EE1528 /* AppDelegate.h */,
 				B95EAEF11BE03EA900EE1528 /* AppDelegate.m */,
+				B91743061BE3296B005477FF /* WarningsViewController.h */,
+				B91743071BE3296B005477FF /* WarningsViewController.m */,
 				B95EAF251BE073EF00EE1528 /* KARootViewController.h */,
 				B95EAF261BE073EF00EE1528 /* KARootViewController.m */,
+				B91743091BE32A9C005477FF /* ApplicationCoordinator.h */,
+				B917430A1BE32A9C005477FF /* ApplicationCoordinator.m */,
 				B95EAF471BE0996F00EE1528 /* KATextView.h */,
 				B95EAF481BE0996F00EE1528 /* KATextView.m */,
 				B95EAF101BE0552900EE1528 /* KAInitializerWriter */,
@@ -295,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B91743081BE3296B005477FF /* WarningsViewController.m in Sources */,
 				B95EAF271BE073EF00EE1528 /* KARootViewController.m in Sources */,
 				B95EAF041BE03F4000EE1528 /* PropertyParser.m in Sources */,
 				B91743001BE31A8D005477FF /* KAWarning.m in Sources */,
@@ -305,6 +316,7 @@
 				B91743031BE31F07005477FF /* KAWarning+Properties.m in Sources */,
 				B95EAEF21BE03EA900EE1528 /* AppDelegate.m in Sources */,
 				B95EAF131BE0554300EE1528 /* KAObjectiveCInitializerWriter.m in Sources */,
+				B917430B1BE32A9C005477FF /* ApplicationCoordinator.m in Sources */,
 				B95EAF491BE0996F00EE1528 /* KATextView.m in Sources */,
 				B9B73BC91BE315D400617A3F /* KAPropertyWarningGenerator.m in Sources */,
 			);
