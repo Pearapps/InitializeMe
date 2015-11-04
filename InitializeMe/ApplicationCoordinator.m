@@ -9,7 +9,7 @@
 #import "ApplicationCoordinator.h"
 #import "WarningsViewController.h"
 
-@interface ApplicationCoordinator ()
+@interface ApplicationCoordinator () <NSWindowDelegate>
 
 @property (nonatomic) NSWindow *window;
 
@@ -20,7 +20,7 @@
 - (void)displayWarnings {
     NSRect frame = NSMakeRect(300, 500, 500, 400);
     
-    NSWindow *window = [[NSWindow alloc] initWithContentRect:frame styleMask:NSTitledWindowMask backing:NSBackingStoreBuffered defer:NO];
+    NSWindow *window = [[NSWindow alloc] initWithContentRect:frame styleMask:NSTitledWindowMask | NSClosableWindowMask backing:NSBackingStoreBuffered defer:NO];
     NSViewController *viewController = [[WarningsViewController alloc] init];
     
     viewController.view.frame = frame;
@@ -29,6 +29,16 @@
     
     [window makeKeyAndOrderFront:nil];
     self.window = window;
+    self.window.delegate = self;
+    
+    window.releasedWhenClosed = NO;
+}
+
+- (void)windowWillClose:(NSNotification *)notification {
+    if ([notification.object isEqual:self.window]) {
+        self.window.delegate = nil;
+        self.window = nil;
+    }
 }
 
 @end

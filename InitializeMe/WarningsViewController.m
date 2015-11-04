@@ -41,7 +41,6 @@
     self.tableView = [[NSTableView alloc] init];
     [self.tableView setDataSource:self];
     [self.view addSubview:self.tableView];
-    
 }
 
 - (nullable id)tableView:(NSTableView *)tableView objectValueForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row {
@@ -52,14 +51,9 @@
     return 10;
 }
 
-
 - (void)viewDidLayout {
     [super viewDidLayout];
     self.vev.frame = self.view.bounds;
-}
-
-- (void)dealloc {
-    
 }
 
 @end
