@@ -8,7 +8,7 @@
 
 #import "WarningsViewController.h"
 
-@interface WarningsViewController () <NSTableViewDataSource>
+@interface WarningsViewController () <NSTableViewDataSource, NSTableViewDelegate>
 
 @property (nonatomic) NSVisualEffectView *vev;
 
@@ -40,12 +40,22 @@
 
     self.tableView = [[NSTableView alloc] init];
     [self.tableView setDataSource:self];
+    [self.tableView setDelegate:self];
     [self.view addSubview:self.tableView];
+    [self.tableView addTableColumn:[[NSTableColumn alloc] initWithIdentifier:@"hi"]];
+    self.tableView.backgroundColor = [NSColor clearColor];
+    self.tableView.rowHeight = 25;
+}
+
+- (void)tableView:(NSTableView *)tableView willDisplayCell:(id)cell forTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row {
+    [cell setTextColor:[NSColor whiteColor]];
+    [cell setFont:[NSFont systemFontOfSize:20]];
 }
 
 - (nullable id)tableView:(NSTableView *)tableView objectValueForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row {
     return @"hi";
 }
+
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
     return 10;
