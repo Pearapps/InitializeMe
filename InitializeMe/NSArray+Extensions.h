@@ -10,6 +10,8 @@
 
 @interface NSArray<ObjectType> (Extensions)
 
+- (BOOL)anyObjectPassTest:(BOOL (^)(ObjectType))test;
+
 - (NSArray *)transformedArrayWithBlock:(id (^)(ObjectType))block;
 
 - (NSArray *)filter:(BOOL (^)(ObjectType))block;

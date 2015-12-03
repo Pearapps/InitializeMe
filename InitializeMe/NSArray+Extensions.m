@@ -10,6 +10,17 @@
 
 @implementation NSArray (Extensions)
 
+- (BOOL)anyObjectPassTest:(BOOL (^)(id object))test {
+    
+    for (id object in self) {
+        if (test(object)) {
+            return YES;
+        }
+    }
+    
+    return NO;
+}
+
 - (NSArray *)transformedArrayWithBlock:(id (^)(id))block {
     NSMutableArray *returnArray = [NSMutableArray new];
     for (id object in self) {
