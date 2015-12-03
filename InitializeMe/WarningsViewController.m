@@ -8,6 +8,7 @@
 
 #import "WarningsViewController.h"
 #import "KAWarning.h"
+#import "NSArray+Extensions.h"
 
 @interface WarningsViewController () <NSTableViewDataSource, NSTableViewDelegate>
 

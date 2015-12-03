@@ -24,10 +24,12 @@
     }
     
     if (![property.qualifiers containsObject:@"nonatomic"]) {
-        [warnings addObject:[[KAWarning alloc] initWithReason:@"Property is atomic." warningLevel:WarningLevelLow property:property]];
+        [warnings addObject:[[KAWarning alloc] initWithReason:@"Property is atomic, are you sure that is what you want?" warningLevel:WarningLevelLow property:property]];
     }
     
-    return [warnings copy];
+    return [warnings filter:^BOOL(KAWarning *warning) {
+        return warning.warningLevel != WarningLevelLow;
+    }];
 }
 
 @end
