@@ -41,7 +41,6 @@
     self.window.title = @"InitializeMe";
     
     [self.window setReleasedWhenClosed:NO];
-    
 }
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag {
