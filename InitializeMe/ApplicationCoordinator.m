@@ -18,7 +18,7 @@
 @implementation ApplicationCoordinator
 
 - (void)displayWarnings:(NSArray *)warnings {
-    NSRect frame = NSMakeRect(300, 500, 500, 400);
+    NSRect frame = NSMakeRect(300, 500, 700, 800);
     
     NSWindow *window = [[NSWindow alloc] initWithContentRect:frame styleMask:NSTitledWindowMask | NSClosableWindowMask backing:NSBackingStoreBuffered defer:NO];
     NSViewController *viewController = [[WarningsViewController alloc] initWithWarnings:warnings];

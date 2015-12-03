@@ -56,6 +56,7 @@
     [self.tableView setDataSource:self];
     [self.tableView setDelegate:self];
     [self.view addSubview:self.tableView];
+    self.tableView.gridStyleMask = NSTableViewSolidHorizontalGridLineMask;
     [self.tableView addTableColumn:[[NSTableColumn alloc] initWithIdentifier:@"hi"]];
     self.tableView.backgroundColor = [NSColor clearColor];
     self.tableView.rowHeight = 40;
