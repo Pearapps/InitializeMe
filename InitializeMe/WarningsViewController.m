@@ -63,7 +63,7 @@
 
 - (void)tableView:(NSTableView *)tableView willDisplayCell:(id)cell forTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row {
     [cell setTextColor:[NSColor whiteColor]];
-    [cell setFont:[NSFont systemFontOfSize:10]];
+    [cell setFont:[NSFont systemFontOfSize:15]];
 }
 
 - (nullable id)tableView:(NSTableView *)tableView objectValueForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row {
