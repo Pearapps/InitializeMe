@@ -23,7 +23,6 @@
 		B95EAF1E1BE05DCA00EE1528 /* InitializeMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF1D1BE05DCA00EE1528 /* InitializeMeTests.m */; };
 		B95EAF271BE073EF00EE1528 /* KARootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF261BE073EF00EE1528 /* KARootViewController.m */; };
 		B95EAF461BE08DEC00EE1528 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B95EAF451BE08DEC00EE1528 /* MainMenu.xib */; };
-		B95EAF491BE0996F00EE1528 /* KATextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF481BE0996F00EE1528 /* KATextView.m */; };
 		B9B73BC91BE315D400617A3F /* KAPropertyWarningGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B73BC81BE315D400617A3F /* KAPropertyWarningGenerator.m */; };
 /* End PBXBuildFile section */
 
@@ -69,8 +68,6 @@
 		B95EAF251BE073EF00EE1528 /* KARootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KARootViewController.h; sourceTree = "<group>"; };
 		B95EAF261BE073EF00EE1528 /* KARootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KARootViewController.m; sourceTree = "<group>"; };
 		B95EAF451BE08DEC00EE1528 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
-		B95EAF471BE0996F00EE1528 /* KATextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KATextView.h; sourceTree = "<group>"; };
-		B95EAF481BE0996F00EE1528 /* KATextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KATextView.m; sourceTree = "<group>"; };
 		B9B73BC71BE315D400617A3F /* KAPropertyWarningGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAPropertyWarningGenerator.h; sourceTree = "<group>"; };
 		B9B73BC81BE315D400617A3F /* KAPropertyWarningGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAPropertyWarningGenerator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,8 +120,6 @@
 				B95EAF261BE073EF00EE1528 /* KARootViewController.m */,
 				B91743091BE32A9C005477FF /* ApplicationCoordinator.h */,
 				B917430A1BE32A9C005477FF /* ApplicationCoordinator.m */,
-				B95EAF471BE0996F00EE1528 /* KATextView.h */,
-				B95EAF481BE0996F00EE1528 /* KATextView.m */,
 				B95EAF101BE0552900EE1528 /* KAInitializerWriter */,
 				B95EAF0A1BE0453600EE1528 /* NSArray+Extensions.h */,
 				B95EAF0B1BE0453600EE1528 /* NSArray+Extensions.m */,
@@ -317,7 +312,6 @@
 				B95EAEF21BE03EA900EE1528 /* AppDelegate.m in Sources */,
 				B95EAF131BE0554300EE1528 /* KAObjectiveCInitializerWriter.m in Sources */,
 				B917430B1BE32A9C005477FF /* ApplicationCoordinator.m in Sources */,
-				B95EAF491BE0996F00EE1528 /* KATextView.m in Sources */,
 				B9B73BC91BE315D400617A3F /* KAPropertyWarningGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

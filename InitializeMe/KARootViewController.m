@@ -9,7 +9,6 @@
 #import "KARootViewController.h"
 #import "KAInitializerWriterFactory.h"
 #import "PropertyParser.h"
-#import "KATextView.h"
 #import "KAPropertyWarningGenerator.h"
 #import "ApplicationCoordinator.h"
 
@@ -77,7 +76,7 @@
     
     self.scrollView = [[NSScrollView alloc] init];
 
-    self.textField = [[KATextView alloc] init];
+    self.textField = [[NSTextView alloc] init];
 
     self.textField.backgroundColor = [NSColor colorWithWhite:0.5 alpha:0.2];
     self.textField.textColor = [NSColor whiteColor];
