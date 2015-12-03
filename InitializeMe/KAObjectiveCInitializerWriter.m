@@ -74,8 +74,8 @@
         [initializerString appendString:@":"];
         [initializerString appendString:@"("];
         
-        if (property.hasPointer && (property.nullabilityType != NullabilityTypeNone)) {
-            [initializerString appendFormat:(property.nullabilityType == NullabilityTypeNonnull) ? @"nonnull " : @"nullable"];
+        if ((property.nullabilityType != NullabilityTypeNone)) {
+            [initializerString appendFormat:(property.nullabilityType == NullabilityTypeNonnull) ? @"nonnull " : @"nullable "];
         }
         
         [initializerString appendString:property.type];
