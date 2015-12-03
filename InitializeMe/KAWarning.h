@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Property.h"
 
 typedef NS_ENUM(NSUInteger, WarningLevel) {
     WarningLevelLow,
@@ -18,7 +19,8 @@ typedef NS_ENUM(NSUInteger, WarningLevel) {
 
 @property (nonatomic, readonly, copy, nonnull) NSString *reason;
 @property (nonatomic, readonly) WarningLevel warningLevel;
+@property (nonatomic, readonly, nonnull) Property *property;
 
-- (nonnull instancetype)initWithReason:(nonnull NSString *)reason warningLevel:(WarningLevel)warningLevel;
+- (nonnull instancetype)initWithReason:(nonnull NSString *)reason warningLevel:(WarningLevel)warningLevel property:(nonnull Property *)property;
 
 @end

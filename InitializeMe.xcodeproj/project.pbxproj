@@ -128,6 +128,7 @@
 				B95EAF101BE0552900EE1528 /* KAInitializerWriter */,
 				B95EAF0A1BE0453600EE1528 /* NSArray+Extensions.h */,
 				B95EAF0B1BE0453600EE1528 /* NSArray+Extensions.m */,
+				B9B73BCA1BE3166600617A3F /* KAPropertyWarningGenerator */,
 				B95EAF051BE03F4300EE1528 /* Property Parsing */,
 				B95EAF011BE03EF800EE1528 /* Random */,
 				B95EAEF31BE03EA900EE1528 /* Supporting Files */,
@@ -155,7 +156,6 @@
 		B95EAF051BE03F4300EE1528 /* Property Parsing */ = {
 			isa = PBXGroup;
 			children = (
-				B9B73BCA1BE3166600617A3F /* KAPropertyWarningGenerator */,
 				B95EAF021BE03F4000EE1528 /* PropertyParser.h */,
 				B95EAF031BE03F4000EE1528 /* PropertyParser.m */,
 				B95EAF091BE0417A00EE1528 /* Property */,

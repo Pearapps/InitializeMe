@@ -14,15 +14,15 @@
     NSMutableArray <KAWarning *>*warnings = [NSMutableArray new];
     
     if (![property.qualifiers containsObject:@"copy"] && [@[@"NSString", @"NSArray", @"NSDictionary"] containsObject:property.type]) {
-        [warnings addObject:[[KAWarning alloc] initWithReason:@"You should add copy to this property." warningLevel:WarningLevelMedium]];
+        [warnings addObject:[[KAWarning alloc] initWithReason:@"You should add copy to this property." warningLevel:WarningLevelMedium property:property]];
     }
     
     if (![property.qualifiers containsObject:@"readonly"]) {
-        [warnings addObject:[[KAWarning alloc] initWithReason:@"Property is mutable." warningLevel:WarningLevelLow]];
+        [warnings addObject:[[KAWarning alloc] initWithReason:@"Property is mutable." warningLevel:WarningLevelLow property:property]];
     }
     
     if (![property.qualifiers containsObject:@"nonatomic"]) {
-        [warnings addObject:[[KAWarning alloc] initWithReason:@"Property is atomic." warningLevel:WarningLevelLow]];
+        [warnings addObject:[[KAWarning alloc] initWithReason:@"Property is atomic." warningLevel:WarningLevelLow property:property]];
     }
     
     return [warnings copy];

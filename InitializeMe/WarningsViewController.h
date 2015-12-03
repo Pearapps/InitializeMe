@@ -8,6 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class KAWarning;
 @interface WarningsViewController : NSViewController
+
+- (nonnull instancetype)initWithWarnings:(nonnull NSArray <KAWarning *> *)warnings;
 
 @end

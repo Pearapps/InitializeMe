@@ -7,6 +7,7 @@
 //
 
 #import "WarningsViewController.h"
+#import "KAWarning.h"
 
 @interface WarningsViewController () <NSTableViewDataSource, NSTableViewDelegate>
 
@@ -14,9 +15,22 @@
 
 @property (nonatomic) NSTableView *tableView;
 
+@property (nonatomic, nonnull, readonly) NSArray <KAWarning *> *warnings;
+
 @end
 
 @implementation WarningsViewController
+
+- (nonnull instancetype)initWithWarnings:(nonnull NSArray <KAWarning *> *)warnings {
+    NSParameterAssert(warnings);
+    self = [super init];
+    
+    if (self) {
+        _warnings = warnings;
+    }
+    
+    return self;
+}
 
 - (void)loadView {
     self.view = [NSView new];
@@ -44,21 +58,21 @@
     [self.view addSubview:self.tableView];
     [self.tableView addTableColumn:[[NSTableColumn alloc] initWithIdentifier:@"hi"]];
     self.tableView.backgroundColor = [NSColor clearColor];
-    self.tableView.rowHeight = 25;
+    self.tableView.rowHeight = 40;
 }
 
 - (void)tableView:(NSTableView *)tableView willDisplayCell:(id)cell forTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row {
     [cell setTextColor:[NSColor whiteColor]];
-    [cell setFont:[NSFont systemFontOfSize:20]];
+    [cell setFont:[NSFont systemFontOfSize:10]];
 }
 
 - (nullable id)tableView:(NSTableView *)tableView objectValueForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row {
-    return @"hi";
+    return [self.warnings[row].reason stringByAppendingFormat:@" - %@", self.warnings[row].property.propertyString];
 }
 
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return 10;
+    return self.warnings.count;
 }
 
 - (void)viewDidLayout {

@@ -10,13 +10,15 @@
 
 @implementation KAWarning
 
-- (nonnull instancetype)initWithReason:(nonnull NSString *)reason warningLevel:(WarningLevel)warningLevel {
+- (nonnull instancetype)initWithReason:(nonnull NSString *)reason warningLevel:(WarningLevel)warningLevel property:(nonnull Property *)property {
     NSParameterAssert(reason);
+    NSParameterAssert(property);
     self = [super init];
     
     if (self) {
         _reason = [reason copy];
         _warningLevel = warningLevel;
+        _property = property;
     }
     
     return self;

@@ -137,7 +137,7 @@
 }
 
 - (void)warnings {
-    [self.applicationCoordinator displayWarnings];
+    [self.applicationCoordinator displayWarnings:[self propertyWarnings]];
 }
 
 - (void)pasteboardButtonPressed {
@@ -145,8 +145,17 @@
     [[NSPasteboard generalPasteboard] setData:[self.displayView.string dataUsingEncoding:NSUTF8StringEncoding] forType:NSPasteboardTypeString];
 }
 
+- (NSArray <KAWarning *> *)propertyWarnings {
+    NSArray <Property *> * properties = [[[PropertyParser alloc] initWithString:self.textField.string] properties];
+    
+    NSString *output = [[KAInitializerWriterFactory initializerWriterForProperties:properties] initializer];
+    self.displayView.string = output;
+    
+    return [[[KAPropertyWarningGenerator alloc] initWithProperties:properties] warnings];
+}
+
 - (void)buttonPressed {
-    id properties = [[[PropertyParser alloc] initWithString:self.textField.string] properties];
+    NSArray <Property *> * properties = [[[PropertyParser alloc] initWithString:self.textField.string] properties];
     
     NSString *output = [[KAInitializerWriterFactory initializerWriterForProperties:properties] initializer];
     self.displayView.string = output;

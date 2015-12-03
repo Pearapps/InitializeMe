@@ -10,6 +10,6 @@
 
 @interface ApplicationCoordinator : NSObject
 
-- (void)displayWarnings;
+- (void)displayWarnings:(NSArray *)warnings;
 
 @end

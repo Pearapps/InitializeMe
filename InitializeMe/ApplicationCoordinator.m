@@ -17,11 +17,11 @@
 
 @implementation ApplicationCoordinator
 
-- (void)displayWarnings {
+- (void)displayWarnings:(NSArray *)warnings {
     NSRect frame = NSMakeRect(300, 500, 500, 400);
     
     NSWindow *window = [[NSWindow alloc] initWithContentRect:frame styleMask:NSTitledWindowMask | NSClosableWindowMask backing:NSBackingStoreBuffered defer:NO];
-    NSViewController *viewController = [[WarningsViewController alloc] init];
+    NSViewController *viewController = [[WarningsViewController alloc] initWithWarnings:warnings];
     
     viewController.view.frame = frame;
     
@@ -30,7 +30,7 @@
     [window makeKeyAndOrderFront:nil];
     self.window = window;
     self.window.delegate = self;
-    
+    window.title = @"Warnings";
     window.releasedWhenClosed = NO;
 }
 

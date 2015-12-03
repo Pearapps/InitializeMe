@@ -37,6 +37,8 @@ typedef NS_ENUM(NSUInteger, NullabilityType) {
 
 @property (nonatomic, readonly) NSString *angleBracketString;
 
+@property (nonatomic, readonly, copy) NSString *propertyString;
+
 - (BOOL)isCopied;
 
 - (BOOL)isValid;
