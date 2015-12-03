@@ -69,7 +69,7 @@
 }
 
 - (void)testProtocols {
-    NSString *expectedOutput = @"- (nonnull instancetype)initWithChain:(id <Chain>)chain {\n"
+    NSString *expectedOutput = @"- (nonnull instancetype)initWithChain:(nonnull id <Chain>)chain {\n"
     "\tNSParameterAssert(chain);\n"
     "\tself = [super init];\n"
     "\n"

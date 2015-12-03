@@ -7,8 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+@class ApplicationCoordinator;
 
 @interface KARootViewController : NSViewController
+
+- (instancetype)initWithApplicationCoordinator:(ApplicationCoordinator *)applicationCoordinator;
 
 - (void)resize;
 

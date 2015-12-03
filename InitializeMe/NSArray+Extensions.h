@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSArray (Extensions)
+@interface NSArray<ObjectType> (Extensions)
 
-- (NSArray *)transformedArrayWithBlock:(id (^)(id))block;
+- (BOOL)anyObjectPassTest:(BOOL (^)(ObjectType))test;
 
-- (NSArray *)filter:(BOOL (^)(id))block;
+- (NSArray *)transformedArrayWithBlock:(id (^)(ObjectType))block;
+
+- (NSArray *)filter:(BOOL (^)(ObjectType))block;
+
++ (NSArray <ObjectType> *)flattenArray:(NSArray<NSArray<ObjectType> *> *)array;
 
 @end

@@ -9,13 +9,6 @@
 #import "Property.h"
 #import "NSArray+Extensions.h"
 
-@interface Property ()
-
-@property (nonatomic, readonly, copy) NSString *propertyString;
-
-
-@end
-
 @implementation Property
 
 - (instancetype)initWithPropertyString:(NSString *)propertyString {

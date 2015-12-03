@@ -9,7 +9,8 @@
 #import "KARootViewController.h"
 #import "KAInitializerWriterFactory.h"
 #import "PropertyParser.h"
-#import "KATextView.h"
+#import "KAPropertyWarningGenerator.h"
+#import "ApplicationCoordinator.h"
 
 @interface KARootViewController ()
 
@@ -19,10 +20,22 @@
 @property (nonatomic) NSButton *pasteboardButton;
 @property (nonatomic) NSVisualEffectView *vev;
 @property (nonatomic) NSScrollView *scrollView;
+@property (nonatomic, readonly) NSButton *warningButton;
+@property (nonatomic, readonly) ApplicationCoordinator *applicationCoordinator;
 
 @end
 
 @implementation KARootViewController
+
+- (instancetype)initWithApplicationCoordinator:(ApplicationCoordinator *)applicationCoordinator {
+    self = [super init];
+    
+    if (self) {
+        _applicationCoordinator = applicationCoordinator;
+    }
+    
+    return self;
+}
 
 - (void)loadView {
     self.view = [[NSView alloc] init];
@@ -43,6 +56,8 @@
     
     self.button.frame = NSMakeRect(CGRectGetWidth(self.scrollView.bounds), CGRectGetMinY(self.scrollView.frame) - CGRectGetHeight(self.scrollView.frame)/2, CGRectGetWidth(self.button.frame), CGRectGetHeight(self.button.frame));
     
+    self.warningButton.frame = NSMakeRect((width - (textWidth))/2, CGRectGetMinY(self.scrollView.frame) - CGRectGetHeight(self.scrollView.frame)/2, CGRectGetWidth(self.warningButton.frame), CGRectGetHeight(self.warningButton.frame));
+
     textWidth = width * 0.95;
 
     self.displayView.frame = NSMakeRect((width - (textWidth))/2, CGRectGetMaxY(self.button.frame) - textHeight - CGRectGetHeight(self.button.frame) - 30, textWidth, textHeight);
@@ -61,7 +76,7 @@
     
     self.scrollView = [[NSScrollView alloc] init];
 
-    self.textField = [[KATextView alloc] init];
+    self.textField = [[NSTextView alloc] init];
 
     self.textField.backgroundColor = [NSColor colorWithWhite:0.5 alpha:0.2];
     self.textField.textColor = [NSColor whiteColor];
@@ -109,6 +124,19 @@
     displayView.textColor = [NSColor whiteColor];
     displayView.insertionPointColor = [NSColor whiteColor];
     self.displayView = displayView;
+    
+    button = [[NSButton alloc] init];
+    [button setTarget:self];
+    [button setAction:@selector(warnings)];
+    button.bezelStyle = NSRoundedBezelStyle;
+    [self.view addSubview:button];
+    [button sizeToFit];
+    button.hidden = YES;
+    _warningButton = button;
+}
+
+- (void)warnings {
+    [self.applicationCoordinator displayWarnings:[self propertyWarnings]];
 }
 
 - (void)pasteboardButtonPressed {
@@ -116,12 +144,27 @@
     [[NSPasteboard generalPasteboard] setData:[self.displayView.string dataUsingEncoding:NSUTF8StringEncoding] forType:NSPasteboardTypeString];
 }
 
-- (void)buttonPressed {
-    id properties = [[[PropertyParser alloc] initWithString:self.textField.string] properties];
+- (NSArray <KAWarning *> *)propertyWarnings {
+    NSArray <Property *> * properties = [[[PropertyParser alloc] initWithString:self.textField.string] properties];
     
     NSString *output = [[KAInitializerWriterFactory initializerWriterForProperties:properties] initializer];
     self.displayView.string = output;
-    NSLog(@"%@", output);
+    
+    return [[[KAPropertyWarningGenerator alloc] initWithProperties:properties] warnings];
+}
+
+- (void)buttonPressed {
+    NSArray <Property *> * properties = [[[PropertyParser alloc] initWithString:self.textField.string] properties];
+    
+    NSString *output = [[KAInitializerWriterFactory initializerWriterForProperties:properties] initializer];
+    self.displayView.string = output;
+
+    NSArray *warnings = [[[KAPropertyWarningGenerator alloc] initWithProperties:properties] warnings];
+    self.warningButton.hidden = warnings.count == 0;
+    
+    [self.warningButton setTitle:[[NSString alloc] initWithFormat:@"%ld Warnings!", warnings.count]];
+    [self.warningButton sizeToFit];
+    
     self.pasteboardButton.hidden = NO;
     [self resize];
 }
