@@ -23,7 +23,6 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     _applicationCoordinator = [[ApplicationCoordinator alloc] init];
-    
     self.viewController = [[KARootViewController alloc] initWithApplicationCoordinator:_applicationCoordinator];
     
     NSRect frame = NSMakeRect(400, 500, 800, 700);
@@ -32,6 +31,8 @@
     
     self.viewController.view.frame = frame;
     
+    self.window.styleMask = (NSTitledWindowMask|NSClosableWindowMask|NSMiniaturizableWindowMask|NSResizableWindowMask);
+    
     [self.window setContentViewController:self.viewController];
     self.viewController.view.autoresizesSubviews = YES;
     
@@ -39,6 +40,13 @@
     
     self.window.title = @"InitializeMe";
     
+    [self.window setReleasedWhenClosed:NO];
+    
+}
+
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag {
+    [self.window makeKeyAndOrderFront:self];
+    return YES;
 }
 
 - (void)windowDidResize:(NSNotification *)notification {
