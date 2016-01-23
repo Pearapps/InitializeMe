@@ -11,6 +11,7 @@
 #import "PropertyParser.h"
 #import "KAPropertyWarningGenerator.h"
 #import "ApplicationCoordinator.h"
+#import "KASwiftBuilderWriter.h"
 
 @interface KARootViewController ()
 
@@ -155,6 +156,9 @@
 
 - (void)buttonPressed {
     NSArray <Property *> * properties = [[[PropertyParser alloc] initWithString:self.textField.string] properties];
+    
+    NSLog(@"%@", [[[KASwiftBuilderWriter alloc] initWithProperties:properties] builderClass]);
+    
     
     NSString *output = [[KAInitializerWriterFactory initializerWriterForProperties:properties] initializer];
     self.displayView.string = output;

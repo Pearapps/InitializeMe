@@ -24,6 +24,7 @@
 		B95EAF271BE073EF00EE1528 /* KARootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF261BE073EF00EE1528 /* KARootViewController.m */; };
 		B95EAF461BE08DEC00EE1528 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B95EAF451BE08DEC00EE1528 /* MainMenu.xib */; };
 		B964A9171C541DE70082DD37 /* KASwiftInitializerWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = B964A9161C541DE70082DD37 /* KASwiftInitializerWriter.m */; };
+		B964A91D1C5438C50082DD37 /* KASwiftBuilderWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = B964A91C1C5438C50082DD37 /* KASwiftBuilderWriter.m */; };
 		B9B73BC91BE315D400617A3F /* KAPropertyWarningGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B73BC81BE315D400617A3F /* KAPropertyWarningGenerator.m */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,9 @@
 		B95EAF451BE08DEC00EE1528 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		B964A9151C541DE70082DD37 /* KASwiftInitializerWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KASwiftInitializerWriter.h; sourceTree = "<group>"; };
 		B964A9161C541DE70082DD37 /* KASwiftInitializerWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KASwiftInitializerWriter.m; sourceTree = "<group>"; };
+		B964A9191C54383B0082DD37 /* KABuilderWriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KABuilderWriter.h; sourceTree = "<group>"; };
+		B964A91B1C5438C50082DD37 /* KASwiftBuilderWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KASwiftBuilderWriter.h; sourceTree = "<group>"; };
+		B964A91C1C5438C50082DD37 /* KASwiftBuilderWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KASwiftBuilderWriter.m; sourceTree = "<group>"; };
 		B9B73BC71BE315D400617A3F /* KAPropertyWarningGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAPropertyWarningGenerator.h; sourceTree = "<group>"; };
 		B9B73BC81BE315D400617A3F /* KAPropertyWarningGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAPropertyWarningGenerator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +127,7 @@
 				B95EAF261BE073EF00EE1528 /* KARootViewController.m */,
 				B91743091BE32A9C005477FF /* ApplicationCoordinator.h */,
 				B917430A1BE32A9C005477FF /* ApplicationCoordinator.m */,
+				B964A91A1C5438420082DD37 /* KABuilderWriter */,
 				B95EAF101BE0552900EE1528 /* KAInitializerWriter */,
 				B95EAF0A1BE0453600EE1528 /* NSArray+Extensions.h */,
 				B95EAF0B1BE0453600EE1528 /* NSArray+Extensions.m */,
@@ -207,6 +212,16 @@
 				B964A9161C541DE70082DD37 /* KASwiftInitializerWriter.m */,
 			);
 			name = "Swift Initializer Writer";
+			sourceTree = "<group>";
+		};
+		B964A91A1C5438420082DD37 /* KABuilderWriter */ = {
+			isa = PBXGroup;
+			children = (
+				B964A9191C54383B0082DD37 /* KABuilderWriter.h */,
+				B964A91B1C5438C50082DD37 /* KASwiftBuilderWriter.h */,
+				B964A91C1C5438C50082DD37 /* KASwiftBuilderWriter.m */,
+			);
+			name = KABuilderWriter;
 			sourceTree = "<group>";
 		};
 		B9B73BCA1BE3166600617A3F /* KAPropertyWarningGenerator */ = {
@@ -332,6 +347,7 @@
 				B91743031BE31F07005477FF /* KAWarning+Properties.m in Sources */,
 				B964A9171C541DE70082DD37 /* KASwiftInitializerWriter.m in Sources */,
 				B95EAEF21BE03EA900EE1528 /* AppDelegate.m in Sources */,
+				B964A91D1C5438C50082DD37 /* KASwiftBuilderWriter.m in Sources */,
 				B95EAF131BE0554300EE1528 /* KAObjectiveCInitializerWriter.m in Sources */,
 				B917430B1BE32A9C005477FF /* ApplicationCoordinator.m in Sources */,
 				B9B73BC91BE315D400617A3F /* KAPropertyWarningGenerator.m in Sources */,
