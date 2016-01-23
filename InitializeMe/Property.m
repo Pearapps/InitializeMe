@@ -104,6 +104,20 @@ static inline BOOL isRangeValid(NSRange range) {
             _nullabilityType = NullabilityTypeNone;
         }
     }
+    else if (_propertyType == PropertyTypeSwift) {
+        
+        BOOL knowsType = [self.propertyString containsString:@":"];
+        
+        if (knowsType) {
+            NSString *type = [[self.propertyString substringFromIndex:[self.propertyString rangeOfString:@":"].location + 1] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+            
+            NSString *name = [[[[[[self.propertyString substringToIndex:[self.propertyString rangeOfString:@":"].location] stringByReplacingOccurrencesOfString:@"lazy " withString:@""] stringByReplacingOccurrencesOfString:@"let " withString:@""] stringByReplacingOccurrencesOfString:@"var " withString:@""] stringByReplacingOccurrencesOfString:@"private " withString:@""] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+                        
+            _variable = name;
+            _type = type;
+        }
+        
+    }
 }
 
 - (BOOL)isValid {
