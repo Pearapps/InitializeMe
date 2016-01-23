@@ -38,7 +38,7 @@
         
         i++;
     }
-        
+    
     inititalizer = [inititalizer stringByAppendingString:@") {\n"];
 
     for (Property *property in self.properties) {
