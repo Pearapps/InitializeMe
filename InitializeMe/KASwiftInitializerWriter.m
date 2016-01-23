@@ -27,10 +27,18 @@
 - (NSString *)initializer {
     NSString *inititalizer = @"init(";
     
+    NSInteger i = 0;
     for (Property *property in self.properties) {
         inititalizer = [inititalizer stringByAppendingFormat:@"%@: %@", property.variable, property.type];
+        
+        if (i != self.properties.count -1) {
+            inititalizer = [inititalizer stringByAppendingString:@", "];
+
+        }
+        
+        i++;
     }
-    
+        
     inititalizer = [inititalizer stringByAppendingString:@") {\n"];
 
     for (Property *property in self.properties) {
