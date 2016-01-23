@@ -44,7 +44,45 @@
         builderClass = [builderClass stringByAppendingString:@"\n"];
     }
     
+    builderClass = [builderClass stringByAppendingString:@"\tfunc build() -> YOURTYPENAME? {"];
+    builderClass = [builderClass stringByAppendingString:@"\n"];
     
+    builderClass = [builderClass stringByAppendingString:@"\t\tguard"];
+
+    NSInteger i = 0;
+    for (Property *property in self.properties) {
+        builderClass = [builderClass stringByAppendingFormat:@" let %@ = %@", property.variable, property.variable];
+        
+        if (i != self.properties.count - 1) {
+            builderClass = [builderClass stringByAppendingString:@","];
+        }
+        
+        i++;
+    }
+    
+    builderClass = [builderClass stringByAppendingString:@" else {\n"];
+    builderClass = [builderClass stringByAppendingString:@"\t\t\treturn nil\n"];
+    builderClass = [builderClass stringByAppendingString:@"\t\t}"];
+    builderClass = [builderClass stringByAppendingString:@"\n"];
+
+    builderClass = [builderClass stringByAppendingString:@"\t\treturn YOURTYPENAME("];
+    
+    i = 0;
+    for (Property *property in self.properties) {
+        builderClass = [builderClass stringByAppendingFormat:@"%@: %@", property.variable, property.variable];
+        
+        if (i != self.properties.count -1) {
+            builderClass = [builderClass stringByAppendingString:@", "];
+        }
+        
+        i++;
+    }
+
+    builderClass = [builderClass stringByAppendingString:@")"];
+    builderClass = [builderClass stringByAppendingString:@"\n"];
+    builderClass = [builderClass stringByAppendingString:@"\t}"];
+
+    builderClass = [builderClass stringByAppendingString:@"\n"];
     return [builderClass stringByAppendingString:@"}"];
 }
 
