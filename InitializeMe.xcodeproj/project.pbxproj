@@ -23,6 +23,7 @@
 		B95EAF1E1BE05DCA00EE1528 /* InitializeMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF1D1BE05DCA00EE1528 /* InitializeMeTests.m */; };
 		B95EAF271BE073EF00EE1528 /* KARootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF261BE073EF00EE1528 /* KARootViewController.m */; };
 		B95EAF461BE08DEC00EE1528 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B95EAF451BE08DEC00EE1528 /* MainMenu.xib */; };
+		B964A9171C541DE70082DD37 /* KASwiftInitializerWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = B964A9161C541DE70082DD37 /* KASwiftInitializerWriter.m */; };
 		B9B73BC91BE315D400617A3F /* KAPropertyWarningGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B73BC81BE315D400617A3F /* KAPropertyWarningGenerator.m */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,8 @@
 		B95EAF251BE073EF00EE1528 /* KARootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KARootViewController.h; sourceTree = "<group>"; };
 		B95EAF261BE073EF00EE1528 /* KARootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KARootViewController.m; sourceTree = "<group>"; };
 		B95EAF451BE08DEC00EE1528 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		B964A9151C541DE70082DD37 /* KASwiftInitializerWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KASwiftInitializerWriter.h; sourceTree = "<group>"; };
+		B964A9161C541DE70082DD37 /* KASwiftInitializerWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KASwiftInitializerWriter.m; sourceTree = "<group>"; };
 		B9B73BC71BE315D400617A3F /* KAPropertyWarningGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAPropertyWarningGenerator.h; sourceTree = "<group>"; };
 		B9B73BC81BE315D400617A3F /* KAPropertyWarningGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAPropertyWarningGenerator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -172,8 +175,8 @@
 			children = (
 				B95EAF141BE0556600EE1528 /* KAInitializerWriterFactory.h */,
 				B95EAF151BE0556600EE1528 /* KAInitializerWriterFactory.m */,
-				B95EAF111BE0554300EE1528 /* KAObjectiveCInitializerWriter.h */,
-				B95EAF121BE0554300EE1528 /* KAObjectiveCInitializerWriter.m */,
+				B964A9181C541E940082DD37 /* Swift Initializer Writer */,
+				B964A9141C541D7B0082DD37 /* Objective-C Initializer Writer */,
 			);
 			name = KAInitializerWriter;
 			sourceTree = "<group>";
@@ -186,6 +189,24 @@
 				B95EAF1F1BE05DCA00EE1528 /* Info.plist */,
 			);
 			path = InitializeMeTests;
+			sourceTree = "<group>";
+		};
+		B964A9141C541D7B0082DD37 /* Objective-C Initializer Writer */ = {
+			isa = PBXGroup;
+			children = (
+				B95EAF111BE0554300EE1528 /* KAObjectiveCInitializerWriter.h */,
+				B95EAF121BE0554300EE1528 /* KAObjectiveCInitializerWriter.m */,
+			);
+			name = "Objective-C Initializer Writer";
+			sourceTree = "<group>";
+		};
+		B964A9181C541E940082DD37 /* Swift Initializer Writer */ = {
+			isa = PBXGroup;
+			children = (
+				B964A9151C541DE70082DD37 /* KASwiftInitializerWriter.h */,
+				B964A9161C541DE70082DD37 /* KASwiftInitializerWriter.m */,
+			);
+			name = "Swift Initializer Writer";
 			sourceTree = "<group>";
 		};
 		B9B73BCA1BE3166600617A3F /* KAPropertyWarningGenerator */ = {
@@ -309,6 +330,7 @@
 				B95EAF161BE0556600EE1528 /* KAInitializerWriterFactory.m in Sources */,
 				B95EAF081BE0417400EE1528 /* Property.m in Sources */,
 				B91743031BE31F07005477FF /* KAWarning+Properties.m in Sources */,
+				B964A9171C541DE70082DD37 /* KASwiftInitializerWriter.m in Sources */,
 				B95EAEF21BE03EA900EE1528 /* AppDelegate.m in Sources */,
 				B95EAF131BE0554300EE1528 /* KAObjectiveCInitializerWriter.m in Sources */,
 				B917430B1BE32A9C005477FF /* ApplicationCoordinator.m in Sources */,
