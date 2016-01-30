@@ -1,0 +1,355 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B9B6A1EA1C5D3FAD009205B2 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B6A1E91C5D3FAD009205B2 /* AppKit.framework */; };
+		B9B6A1EC1C5D3FAD009205B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B6A1EB1C5D3FAD009205B2 /* Foundation.framework */; };
+		B9B6A2131C5D40A6009205B2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9B6A2121C5D40A6009205B2 /* Info.plist */; };
+		B9B6A2181C5D40CC009205B2 /* NSObject_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6A2151C5D40CC009205B2 /* NSObject_Extension.m */; };
+		B9B6A2191C5D40CC009205B2 /* Phoenix.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6A2171C5D40CC009205B2 /* Phoenix.m */; };
+		B9B6A2491C5D422F009205B2 /* KAInitializerWriterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6A2381C5D422F009205B2 /* KAInitializerWriterFactory.m */; };
+		B9B6A24A1C5D422F009205B2 /* KAObjectiveCInitializerWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6A23A1C5D422F009205B2 /* KAObjectiveCInitializerWriter.m */; };
+		B9B6A24B1C5D422F009205B2 /* KAPropertyWarningGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6A23C1C5D422F009205B2 /* KAPropertyWarningGenerator.m */; };
+		B9B6A24C1C5D422F009205B2 /* KASwiftInitializerWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6A23E1C5D422F009205B2 /* KASwiftInitializerWriter.m */; };
+		B9B6A24D1C5D422F009205B2 /* KAWarning+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6A2401C5D422F009205B2 /* KAWarning+Properties.m */; };
+		B9B6A24E1C5D422F009205B2 /* KAWarning.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6A2421C5D422F009205B2 /* KAWarning.m */; };
+		B9B6A24F1C5D422F009205B2 /* NSArray+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6A2441C5D422F009205B2 /* NSArray+Extensions.m */; };
+		B9B6A2501C5D422F009205B2 /* Property.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6A2461C5D422F009205B2 /* Property.m */; };
+		B9B6A2511C5D422F009205B2 /* PropertyParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6A2481C5D422F009205B2 /* PropertyParser.m */; };
+		B9B6A26F1C5D42D1009205B2 /* Phoenix.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = B9B6A26E1C5D42D1009205B2 /* Phoenix.xcscheme */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B9B6A1E61C5D3FAD009205B2 /* Phoenix.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Phoenix.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9B6A1E91C5D3FAD009205B2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		B9B6A1EB1C5D3FAD009205B2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		B9B6A2121C5D40A6009205B2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9B6A2141C5D40CC009205B2 /* NSObject_Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObject_Extension.h; sourceTree = "<group>"; };
+		B9B6A2151C5D40CC009205B2 /* NSObject_Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObject_Extension.m; sourceTree = "<group>"; };
+		B9B6A2161C5D40CC009205B2 /* Phoenix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Phoenix.h; sourceTree = "<group>"; };
+		B9B6A2171C5D40CC009205B2 /* Phoenix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Phoenix.m; sourceTree = "<group>"; };
+		B9B6A2371C5D422F009205B2 /* KAInitializerWriterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAInitializerWriterFactory.h; sourceTree = "<group>"; };
+		B9B6A2381C5D422F009205B2 /* KAInitializerWriterFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAInitializerWriterFactory.m; sourceTree = "<group>"; };
+		B9B6A2391C5D422F009205B2 /* KAObjectiveCInitializerWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAObjectiveCInitializerWriter.h; sourceTree = "<group>"; };
+		B9B6A23A1C5D422F009205B2 /* KAObjectiveCInitializerWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAObjectiveCInitializerWriter.m; sourceTree = "<group>"; };
+		B9B6A23B1C5D422F009205B2 /* KAPropertyWarningGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAPropertyWarningGenerator.h; sourceTree = "<group>"; };
+		B9B6A23C1C5D422F009205B2 /* KAPropertyWarningGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAPropertyWarningGenerator.m; sourceTree = "<group>"; };
+		B9B6A23D1C5D422F009205B2 /* KASwiftInitializerWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KASwiftInitializerWriter.h; sourceTree = "<group>"; };
+		B9B6A23E1C5D422F009205B2 /* KASwiftInitializerWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KASwiftInitializerWriter.m; sourceTree = "<group>"; };
+		B9B6A23F1C5D422F009205B2 /* KAWarning+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KAWarning+Properties.h"; sourceTree = "<group>"; };
+		B9B6A2401C5D422F009205B2 /* KAWarning+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KAWarning+Properties.m"; sourceTree = "<group>"; };
+		B9B6A2411C5D422F009205B2 /* KAWarning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAWarning.h; sourceTree = "<group>"; };
+		B9B6A2421C5D422F009205B2 /* KAWarning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAWarning.m; sourceTree = "<group>"; };
+		B9B6A2431C5D422F009205B2 /* NSArray+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extensions.h"; sourceTree = "<group>"; };
+		B9B6A2441C5D422F009205B2 /* NSArray+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extensions.m"; sourceTree = "<group>"; };
+		B9B6A2451C5D422F009205B2 /* Property.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Property.h; sourceTree = "<group>"; };
+		B9B6A2461C5D422F009205B2 /* Property.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Property.m; sourceTree = "<group>"; };
+		B9B6A2471C5D422F009205B2 /* PropertyParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyParser.h; sourceTree = "<group>"; };
+		B9B6A2481C5D422F009205B2 /* PropertyParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyParser.m; sourceTree = "<group>"; };
+		B9B6A26E1C5D42D1009205B2 /* Phoenix.xcscheme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Phoenix.xcscheme; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B9B6A1E41C5D3FAD009205B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9B6A1EA1C5D3FAD009205B2 /* AppKit.framework in Frameworks */,
+				B9B6A1EC1C5D3FAD009205B2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B9B6A1DD1C5D3FAD009205B2 = {
+			isa = PBXGroup;
+			children = (
+				B9B6A1ED1C5D3FAD009205B2 /* Phoenix */,
+				B9B6A1E81C5D3FAD009205B2 /* Frameworks */,
+				B9B6A1E71C5D3FAD009205B2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B9B6A1E71C5D3FAD009205B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B9B6A1E61C5D3FAD009205B2 /* Phoenix.xcplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B9B6A1E81C5D3FAD009205B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9B6A1E91C5D3FAD009205B2 /* AppKit.framework */,
+				B9B6A1EB1C5D3FAD009205B2 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B9B6A1ED1C5D3FAD009205B2 /* Phoenix */ = {
+			isa = PBXGroup;
+			children = (
+				B9B6A2361C5D422F009205B2 /* Shared Code */,
+				B9B6A2141C5D40CC009205B2 /* NSObject_Extension.h */,
+				B9B6A2151C5D40CC009205B2 /* NSObject_Extension.m */,
+				B9B6A2161C5D40CC009205B2 /* Phoenix.h */,
+				B9B6A2171C5D40CC009205B2 /* Phoenix.m */,
+				B9B6A2121C5D40A6009205B2 /* Info.plist */,
+				B9B6A1EE1C5D3FAD009205B2 /* Supporting Files */,
+			);
+			path = Phoenix;
+			sourceTree = "<group>";
+		};
+		B9B6A1EE1C5D3FAD009205B2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B9B6A26E1C5D42D1009205B2 /* Phoenix.xcscheme */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B9B6A2361C5D422F009205B2 /* Shared Code */ = {
+			isa = PBXGroup;
+			children = (
+				B9B6A2371C5D422F009205B2 /* KAInitializerWriterFactory.h */,
+				B9B6A2381C5D422F009205B2 /* KAInitializerWriterFactory.m */,
+				B9B6A2391C5D422F009205B2 /* KAObjectiveCInitializerWriter.h */,
+				B9B6A23A1C5D422F009205B2 /* KAObjectiveCInitializerWriter.m */,
+				B9B6A23B1C5D422F009205B2 /* KAPropertyWarningGenerator.h */,
+				B9B6A23C1C5D422F009205B2 /* KAPropertyWarningGenerator.m */,
+				B9B6A23D1C5D422F009205B2 /* KASwiftInitializerWriter.h */,
+				B9B6A23E1C5D422F009205B2 /* KASwiftInitializerWriter.m */,
+				B9B6A23F1C5D422F009205B2 /* KAWarning+Properties.h */,
+				B9B6A2401C5D422F009205B2 /* KAWarning+Properties.m */,
+				B9B6A2411C5D422F009205B2 /* KAWarning.h */,
+				B9B6A2421C5D422F009205B2 /* KAWarning.m */,
+				B9B6A2431C5D422F009205B2 /* NSArray+Extensions.h */,
+				B9B6A2441C5D422F009205B2 /* NSArray+Extensions.m */,
+				B9B6A2451C5D422F009205B2 /* Property.h */,
+				B9B6A2461C5D422F009205B2 /* Property.m */,
+				B9B6A2471C5D422F009205B2 /* PropertyParser.h */,
+				B9B6A2481C5D422F009205B2 /* PropertyParser.m */,
+			);
+			path = "Shared Code";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B9B6A1E51C5D3FAD009205B2 /* Phoenix */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9B6A1FA1C5D3FAD009205B2 /* Build configuration list for PBXNativeTarget "Phoenix" */;
+			buildPhases = (
+				B9B6A1E21C5D3FAD009205B2 /* Sources */,
+				B9B6A1E31C5D3FAD009205B2 /* Resources */,
+				B9B6A1E41C5D3FAD009205B2 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Phoenix;
+			productName = Phoenix;
+			productReference = B9B6A1E61C5D3FAD009205B2 /* Phoenix.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B9B6A1DE1C5D3FAD009205B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Kenneth Ackerson";
+				TargetAttributes = {
+					B9B6A1E51C5D3FAD009205B2 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = B9B6A1E11C5D3FAD009205B2 /* Build configuration list for PBXProject "Phoenix" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B9B6A1DD1C5D3FAD009205B2;
+			productRefGroup = B9B6A1E71C5D3FAD009205B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B9B6A1E51C5D3FAD009205B2 /* Phoenix */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B9B6A1E31C5D3FAD009205B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9B6A2131C5D40A6009205B2 /* Info.plist in Resources */,
+				B9B6A26F1C5D42D1009205B2 /* Phoenix.xcscheme in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B9B6A1E21C5D3FAD009205B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9B6A2501C5D422F009205B2 /* Property.m in Sources */,
+				B9B6A24E1C5D422F009205B2 /* KAWarning.m in Sources */,
+				B9B6A2181C5D40CC009205B2 /* NSObject_Extension.m in Sources */,
+				B9B6A24C1C5D422F009205B2 /* KASwiftInitializerWriter.m in Sources */,
+				B9B6A24A1C5D422F009205B2 /* KAObjectiveCInitializerWriter.m in Sources */,
+				B9B6A24F1C5D422F009205B2 /* NSArray+Extensions.m in Sources */,
+				B9B6A2491C5D422F009205B2 /* KAInitializerWriterFactory.m in Sources */,
+				B9B6A2511C5D422F009205B2 /* PropertyParser.m in Sources */,
+				B9B6A24D1C5D422F009205B2 /* KAWarning+Properties.m in Sources */,
+				B9B6A2191C5D40CC009205B2 /* Phoenix.m in Sources */,
+				B9B6A24B1C5D422F009205B2 /* KAPropertyWarningGenerator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B9B6A1F81C5D3FAD009205B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		B9B6A1F91C5D3FAD009205B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+			};
+			name = Release;
+		};
+		B9B6A1FB1C5D3FAD009205B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = Phoenix/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = pear.Phoenix;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		B9B6A1FC1C5D3FAD009205B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = Phoenix/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = pear.Phoenix;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B9B6A1E11C5D3FAD009205B2 /* Build configuration list for PBXProject "Phoenix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9B6A1F81C5D3FAD009205B2 /* Debug */,
+				B9B6A1F91C5D3FAD009205B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9B6A1FA1C5D3FAD009205B2 /* Build configuration list for PBXNativeTarget "Phoenix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9B6A1FB1C5D3FAD009205B2 /* Debug */,
+				B9B6A1FC1C5D3FAD009205B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B9B6A1DE1C5D3FAD009205B2 /* Project object */;
+}

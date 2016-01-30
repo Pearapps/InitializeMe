@@ -8,24 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		B90ACDCA1C5D34D600E2E34B /* SwiftInititalizerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B90ACDC91C5D34D600E2E34B /* SwiftInititalizerTests.m */; };
-		B91743001BE31A8D005477FF /* KAWarning.m in Sources */ = {isa = PBXBuildFile; fileRef = B91742FF1BE31A8D005477FF /* KAWarning.m */; };
-		B91743031BE31F07005477FF /* KAWarning+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B91743021BE31F07005477FF /* KAWarning+Properties.m */; };
 		B91743051BE3252B005477FF /* KAWarningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B91743041BE3252B005477FF /* KAWarningTests.m */; };
 		B91743081BE3296B005477FF /* WarningsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B91743071BE3296B005477FF /* WarningsViewController.m */; };
 		B917430B1BE32A9C005477FF /* ApplicationCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = B917430A1BE32A9C005477FF /* ApplicationCoordinator.m */; };
 		B95EAEF21BE03EA900EE1528 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAEF11BE03EA900EE1528 /* AppDelegate.m */; };
 		B95EAEF51BE03EA900EE1528 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAEF41BE03EA900EE1528 /* main.m */; };
 		B95EAEF71BE03EA900EE1528 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B95EAEF61BE03EA900EE1528 /* Assets.xcassets */; };
-		B95EAF041BE03F4000EE1528 /* PropertyParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF031BE03F4000EE1528 /* PropertyParser.m */; };
-		B95EAF081BE0417400EE1528 /* Property.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF071BE0417400EE1528 /* Property.m */; };
-		B95EAF0C1BE0453600EE1528 /* NSArray+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF0B1BE0453600EE1528 /* NSArray+Extensions.m */; };
-		B95EAF131BE0554300EE1528 /* KAObjectiveCInitializerWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF121BE0554300EE1528 /* KAObjectiveCInitializerWriter.m */; };
-		B95EAF161BE0556600EE1528 /* KAInitializerWriterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF151BE0556600EE1528 /* KAInitializerWriterFactory.m */; };
 		B95EAF1E1BE05DCA00EE1528 /* ObjectiveCInitializeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF1D1BE05DCA00EE1528 /* ObjectiveCInitializeTests.m */; };
 		B95EAF271BE073EF00EE1528 /* KARootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF261BE073EF00EE1528 /* KARootViewController.m */; };
 		B95EAF461BE08DEC00EE1528 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B95EAF451BE08DEC00EE1528 /* MainMenu.xib */; };
-		B964A9171C541DE70082DD37 /* KASwiftInitializerWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = B964A9161C541DE70082DD37 /* KASwiftInitializerWriter.m */; };
-		B9B73BC91BE315D400617A3F /* KAPropertyWarningGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B73BC81BE315D400617A3F /* KAPropertyWarningGenerator.m */; };
+		B9B6A2651C5D424C009205B2 /* KAInitializerWriterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6A2541C5D424C009205B2 /* KAInitializerWriterFactory.m */; };
+		B9B6A2661C5D424C009205B2 /* KAObjectiveCInitializerWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6A2561C5D424C009205B2 /* KAObjectiveCInitializerWriter.m */; };
+		B9B6A2671C5D424C009205B2 /* KAPropertyWarningGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6A2581C5D424C009205B2 /* KAPropertyWarningGenerator.m */; };
+		B9B6A2681C5D424C009205B2 /* KASwiftInitializerWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6A25A1C5D424C009205B2 /* KASwiftInitializerWriter.m */; };
+		B9B6A2691C5D424C009205B2 /* KAWarning+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6A25C1C5D424C009205B2 /* KAWarning+Properties.m */; };
+		B9B6A26A1C5D424C009205B2 /* KAWarning.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6A25E1C5D424C009205B2 /* KAWarning.m */; };
+		B9B6A26B1C5D424C009205B2 /* NSArray+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6A2601C5D424C009205B2 /* NSArray+Extensions.m */; };
+		B9B6A26C1C5D424C009205B2 /* Property.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6A2621C5D424C009205B2 /* Property.m */; };
+		B9B6A26D1C5D424C009205B2 /* PropertyParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6A2641C5D424C009205B2 /* PropertyParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +40,6 @@
 
 /* Begin PBXFileReference section */
 		B90ACDC91C5D34D600E2E34B /* SwiftInititalizerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwiftInititalizerTests.m; sourceTree = "<group>"; };
-		B91742FE1BE31A8D005477FF /* KAWarning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAWarning.h; sourceTree = "<group>"; };
-		B91742FF1BE31A8D005477FF /* KAWarning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAWarning.m; sourceTree = "<group>"; };
-		B91743011BE31F07005477FF /* KAWarning+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KAWarning+Properties.h"; sourceTree = "<group>"; };
-		B91743021BE31F07005477FF /* KAWarning+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KAWarning+Properties.m"; sourceTree = "<group>"; };
 		B91743041BE3252B005477FF /* KAWarningTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAWarningTests.m; sourceTree = "<group>"; };
 		B91743061BE3296B005477FF /* WarningsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarningsViewController.h; sourceTree = "<group>"; };
 		B91743071BE3296B005477FF /* WarningsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarningsViewController.m; sourceTree = "<group>"; };
@@ -55,26 +51,32 @@
 		B95EAEF41BE03EA900EE1528 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B95EAEF61BE03EA900EE1528 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B95EAEFB1BE03EA900EE1528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B95EAF021BE03F4000EE1528 /* PropertyParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyParser.h; sourceTree = "<group>"; };
-		B95EAF031BE03F4000EE1528 /* PropertyParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyParser.m; sourceTree = "<group>"; };
-		B95EAF061BE0417400EE1528 /* Property.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Property.h; sourceTree = "<group>"; };
-		B95EAF071BE0417400EE1528 /* Property.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Property.m; sourceTree = "<group>"; };
-		B95EAF0A1BE0453600EE1528 /* NSArray+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extensions.h"; sourceTree = "<group>"; };
-		B95EAF0B1BE0453600EE1528 /* NSArray+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extensions.m"; sourceTree = "<group>"; };
-		B95EAF111BE0554300EE1528 /* KAObjectiveCInitializerWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAObjectiveCInitializerWriter.h; sourceTree = "<group>"; };
-		B95EAF121BE0554300EE1528 /* KAObjectiveCInitializerWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAObjectiveCInitializerWriter.m; sourceTree = "<group>"; };
-		B95EAF141BE0556600EE1528 /* KAInitializerWriterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAInitializerWriterFactory.h; sourceTree = "<group>"; };
-		B95EAF151BE0556600EE1528 /* KAInitializerWriterFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAInitializerWriterFactory.m; sourceTree = "<group>"; };
 		B95EAF1B1BE05DCA00EE1528 /* InitializeMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InitializeMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B95EAF1D1BE05DCA00EE1528 /* ObjectiveCInitializeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCInitializeTests.m; sourceTree = "<group>"; };
 		B95EAF1F1BE05DCA00EE1528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B95EAF251BE073EF00EE1528 /* KARootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KARootViewController.h; sourceTree = "<group>"; };
 		B95EAF261BE073EF00EE1528 /* KARootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KARootViewController.m; sourceTree = "<group>"; };
 		B95EAF451BE08DEC00EE1528 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
-		B964A9151C541DE70082DD37 /* KASwiftInitializerWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KASwiftInitializerWriter.h; sourceTree = "<group>"; };
-		B964A9161C541DE70082DD37 /* KASwiftInitializerWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KASwiftInitializerWriter.m; sourceTree = "<group>"; };
-		B9B73BC71BE315D400617A3F /* KAPropertyWarningGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAPropertyWarningGenerator.h; sourceTree = "<group>"; };
-		B9B73BC81BE315D400617A3F /* KAPropertyWarningGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAPropertyWarningGenerator.m; sourceTree = "<group>"; };
+		B9634C311C5D208400FBBD46 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		B9634C331C5D208400FBBD46 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		B9B6A2531C5D424C009205B2 /* KAInitializerWriterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAInitializerWriterFactory.h; sourceTree = "<group>"; };
+		B9B6A2541C5D424C009205B2 /* KAInitializerWriterFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAInitializerWriterFactory.m; sourceTree = "<group>"; };
+		B9B6A2551C5D424C009205B2 /* KAObjectiveCInitializerWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAObjectiveCInitializerWriter.h; sourceTree = "<group>"; };
+		B9B6A2561C5D424C009205B2 /* KAObjectiveCInitializerWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAObjectiveCInitializerWriter.m; sourceTree = "<group>"; };
+		B9B6A2571C5D424C009205B2 /* KAPropertyWarningGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAPropertyWarningGenerator.h; sourceTree = "<group>"; };
+		B9B6A2581C5D424C009205B2 /* KAPropertyWarningGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAPropertyWarningGenerator.m; sourceTree = "<group>"; };
+		B9B6A2591C5D424C009205B2 /* KASwiftInitializerWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KASwiftInitializerWriter.h; sourceTree = "<group>"; };
+		B9B6A25A1C5D424C009205B2 /* KASwiftInitializerWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KASwiftInitializerWriter.m; sourceTree = "<group>"; };
+		B9B6A25B1C5D424C009205B2 /* KAWarning+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KAWarning+Properties.h"; sourceTree = "<group>"; };
+		B9B6A25C1C5D424C009205B2 /* KAWarning+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KAWarning+Properties.m"; sourceTree = "<group>"; };
+		B9B6A25D1C5D424C009205B2 /* KAWarning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAWarning.h; sourceTree = "<group>"; };
+		B9B6A25E1C5D424C009205B2 /* KAWarning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAWarning.m; sourceTree = "<group>"; };
+		B9B6A25F1C5D424C009205B2 /* NSArray+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extensions.h"; sourceTree = "<group>"; };
+		B9B6A2601C5D424C009205B2 /* NSArray+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extensions.m"; sourceTree = "<group>"; };
+		B9B6A2611C5D424C009205B2 /* Property.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Property.h; sourceTree = "<group>"; };
+		B9B6A2621C5D424C009205B2 /* Property.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Property.m; sourceTree = "<group>"; };
+		B9B6A2631C5D424C009205B2 /* PropertyParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyParser.h; sourceTree = "<group>"; };
+		B9B6A2641C5D424C009205B2 /* PropertyParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +100,8 @@
 		B95EAEE41BE03EA900EE1528 = {
 			isa = PBXGroup;
 			children = (
-				B95EAEEF1BE03EA900EE1528 /* InitializeMe */,
-				B95EAF1C1BE05DCA00EE1528 /* InitializeMeTests */,
+				B9634C431C5D20A900FBBD46 /* Mac App */,
+				B9634C301C5D208400FBBD46 /* Frameworks */,
 				B95EAEEE1BE03EA900EE1528 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,11 +127,6 @@
 				B95EAF261BE073EF00EE1528 /* KARootViewController.m */,
 				B91743091BE32A9C005477FF /* ApplicationCoordinator.h */,
 				B917430A1BE32A9C005477FF /* ApplicationCoordinator.m */,
-				B95EAF101BE0552900EE1528 /* KAInitializerWriter */,
-				B95EAF0A1BE0453600EE1528 /* NSArray+Extensions.h */,
-				B95EAF0B1BE0453600EE1528 /* NSArray+Extensions.m */,
-				B9B73BCA1BE3166600617A3F /* KAPropertyWarningGenerator */,
-				B95EAF051BE03F4300EE1528 /* Property Parsing */,
 				B95EAF011BE03EF800EE1528 /* Random */,
 				B95EAEF31BE03EA900EE1528 /* Supporting Files */,
 			);
@@ -153,36 +150,6 @@
 			name = Random;
 			sourceTree = "<group>";
 		};
-		B95EAF051BE03F4300EE1528 /* Property Parsing */ = {
-			isa = PBXGroup;
-			children = (
-				B95EAF021BE03F4000EE1528 /* PropertyParser.h */,
-				B95EAF031BE03F4000EE1528 /* PropertyParser.m */,
-				B95EAF091BE0417A00EE1528 /* Property */,
-			);
-			name = "Property Parsing";
-			sourceTree = "<group>";
-		};
-		B95EAF091BE0417A00EE1528 /* Property */ = {
-			isa = PBXGroup;
-			children = (
-				B95EAF061BE0417400EE1528 /* Property.h */,
-				B95EAF071BE0417400EE1528 /* Property.m */,
-			);
-			name = Property;
-			sourceTree = "<group>";
-		};
-		B95EAF101BE0552900EE1528 /* KAInitializerWriter */ = {
-			isa = PBXGroup;
-			children = (
-				B95EAF141BE0556600EE1528 /* KAInitializerWriterFactory.h */,
-				B95EAF151BE0556600EE1528 /* KAInitializerWriterFactory.m */,
-				B964A9181C541E940082DD37 /* Swift Initializer Writer */,
-				B964A9141C541D7B0082DD37 /* Objective-C Initializer Writer */,
-			);
-			name = KAInitializerWriter;
-			sourceTree = "<group>";
-		};
 		B95EAF1C1BE05DCA00EE1528 /* InitializeMeTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,35 +161,48 @@
 			path = InitializeMeTests;
 			sourceTree = "<group>";
 		};
-		B964A9141C541D7B0082DD37 /* Objective-C Initializer Writer */ = {
+		B9634C301C5D208400FBBD46 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B95EAF111BE0554300EE1528 /* KAObjectiveCInitializerWriter.h */,
-				B95EAF121BE0554300EE1528 /* KAObjectiveCInitializerWriter.m */,
+				B9634C311C5D208400FBBD46 /* AppKit.framework */,
+				B9634C331C5D208400FBBD46 /* Foundation.framework */,
 			);
-			name = "Objective-C Initializer Writer";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B964A9181C541E940082DD37 /* Swift Initializer Writer */ = {
+		B9634C431C5D20A900FBBD46 /* Mac App */ = {
 			isa = PBXGroup;
 			children = (
-				B964A9151C541DE70082DD37 /* KASwiftInitializerWriter.h */,
-				B964A9161C541DE70082DD37 /* KASwiftInitializerWriter.m */,
+				B9B6A2521C5D424C009205B2 /* Shared Code */,
+				B95EAEEF1BE03EA900EE1528 /* InitializeMe */,
+				B95EAF1C1BE05DCA00EE1528 /* InitializeMeTests */,
 			);
-			name = "Swift Initializer Writer";
+			name = "Mac App";
 			sourceTree = "<group>";
 		};
-		B9B73BCA1BE3166600617A3F /* KAPropertyWarningGenerator */ = {
+		B9B6A2521C5D424C009205B2 /* Shared Code */ = {
 			isa = PBXGroup;
 			children = (
-				B9B73BC71BE315D400617A3F /* KAPropertyWarningGenerator.h */,
-				B9B73BC81BE315D400617A3F /* KAPropertyWarningGenerator.m */,
-				B91742FE1BE31A8D005477FF /* KAWarning.h */,
-				B91742FF1BE31A8D005477FF /* KAWarning.m */,
-				B91743011BE31F07005477FF /* KAWarning+Properties.h */,
-				B91743021BE31F07005477FF /* KAWarning+Properties.m */,
+				B9B6A2531C5D424C009205B2 /* KAInitializerWriterFactory.h */,
+				B9B6A2541C5D424C009205B2 /* KAInitializerWriterFactory.m */,
+				B9B6A2551C5D424C009205B2 /* KAObjectiveCInitializerWriter.h */,
+				B9B6A2561C5D424C009205B2 /* KAObjectiveCInitializerWriter.m */,
+				B9B6A2571C5D424C009205B2 /* KAPropertyWarningGenerator.h */,
+				B9B6A2581C5D424C009205B2 /* KAPropertyWarningGenerator.m */,
+				B9B6A2591C5D424C009205B2 /* KASwiftInitializerWriter.h */,
+				B9B6A25A1C5D424C009205B2 /* KASwiftInitializerWriter.m */,
+				B9B6A25B1C5D424C009205B2 /* KAWarning+Properties.h */,
+				B9B6A25C1C5D424C009205B2 /* KAWarning+Properties.m */,
+				B9B6A25D1C5D424C009205B2 /* KAWarning.h */,
+				B9B6A25E1C5D424C009205B2 /* KAWarning.m */,
+				B9B6A25F1C5D424C009205B2 /* NSArray+Extensions.h */,
+				B9B6A2601C5D424C009205B2 /* NSArray+Extensions.m */,
+				B9B6A2611C5D424C009205B2 /* Property.h */,
+				B9B6A2621C5D424C009205B2 /* Property.m */,
+				B9B6A2631C5D424C009205B2 /* PropertyParser.h */,
+				B9B6A2641C5D424C009205B2 /* PropertyParser.m */,
 			);
-			name = KAPropertyWarningGenerator;
+			path = "Shared Code";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,20 +304,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9B6A26C1C5D424C009205B2 /* Property.m in Sources */,
 				B91743081BE3296B005477FF /* WarningsViewController.m in Sources */,
+				B9B6A2681C5D424C009205B2 /* KASwiftInitializerWriter.m in Sources */,
+				B9B6A26A1C5D424C009205B2 /* KAWarning.m in Sources */,
 				B95EAF271BE073EF00EE1528 /* KARootViewController.m in Sources */,
-				B95EAF041BE03F4000EE1528 /* PropertyParser.m in Sources */,
-				B91743001BE31A8D005477FF /* KAWarning.m in Sources */,
 				B95EAEF51BE03EA900EE1528 /* main.m in Sources */,
-				B95EAF0C1BE0453600EE1528 /* NSArray+Extensions.m in Sources */,
-				B95EAF161BE0556600EE1528 /* KAInitializerWriterFactory.m in Sources */,
-				B95EAF081BE0417400EE1528 /* Property.m in Sources */,
-				B91743031BE31F07005477FF /* KAWarning+Properties.m in Sources */,
-				B964A9171C541DE70082DD37 /* KASwiftInitializerWriter.m in Sources */,
 				B95EAEF21BE03EA900EE1528 /* AppDelegate.m in Sources */,
-				B95EAF131BE0554300EE1528 /* KAObjectiveCInitializerWriter.m in Sources */,
+				B9B6A2651C5D424C009205B2 /* KAInitializerWriterFactory.m in Sources */,
+				B9B6A2671C5D424C009205B2 /* KAPropertyWarningGenerator.m in Sources */,
+				B9B6A26D1C5D424C009205B2 /* PropertyParser.m in Sources */,
 				B917430B1BE32A9C005477FF /* ApplicationCoordinator.m in Sources */,
-				B9B73BC91BE315D400617A3F /* KAPropertyWarningGenerator.m in Sources */,
+				B9B6A2661C5D424C009205B2 /* KAObjectiveCInitializerWriter.m in Sources */,
+				B9B6A26B1C5D424C009205B2 /* NSArray+Extensions.m in Sources */,
+				B9B6A2691C5D424C009205B2 /* KAWarning+Properties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
