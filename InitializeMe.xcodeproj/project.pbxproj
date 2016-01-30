@@ -17,8 +17,6 @@
 		B95EAF1E1BE05DCA00EE1528 /* ObjectiveCInitializeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF1D1BE05DCA00EE1528 /* ObjectiveCInitializeTests.m */; };
 		B95EAF271BE073EF00EE1528 /* KARootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF261BE073EF00EE1528 /* KARootViewController.m */; };
 		B95EAF461BE08DEC00EE1528 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B95EAF451BE08DEC00EE1528 /* MainMenu.xib */; };
-		B9B6A2021C5D3FDD009205B2 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9634C311C5D208400FBBD46 /* AppKit.framework */; };
-		B9B6A2031C5D3FDD009205B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9634C331C5D208400FBBD46 /* Foundation.framework */; };
 		B9B6A2651C5D424C009205B2 /* KAInitializerWriterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6A2541C5D424C009205B2 /* KAInitializerWriterFactory.m */; };
 		B9B6A2661C5D424C009205B2 /* KAObjectiveCInitializerWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6A2561C5D424C009205B2 /* KAObjectiveCInitializerWriter.m */; };
 		B9B6A2671C5D424C009205B2 /* KAPropertyWarningGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6A2581C5D424C009205B2 /* KAPropertyWarningGenerator.m */; };
@@ -61,7 +59,6 @@
 		B95EAF451BE08DEC00EE1528 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		B9634C311C5D208400FBBD46 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		B9634C331C5D208400FBBD46 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		B9B6A2011C5D3FDD009205B2 /* Phoenix.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Phoenix.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B6A2531C5D424C009205B2 /* KAInitializerWriterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAInitializerWriterFactory.h; sourceTree = "<group>"; };
 		B9B6A2541C5D424C009205B2 /* KAInitializerWriterFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAInitializerWriterFactory.m; sourceTree = "<group>"; };
 		B9B6A2551C5D424C009205B2 /* KAObjectiveCInitializerWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAObjectiveCInitializerWriter.h; sourceTree = "<group>"; };
@@ -97,15 +94,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9B6A1FF1C5D3FDD009205B2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B9B6A2021C5D3FDD009205B2 /* AppKit.framework in Frameworks */,
-				B9B6A2031C5D3FDD009205B2 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -123,7 +111,6 @@
 			children = (
 				B95EAEED1BE03EA900EE1528 /* InitializeMe.app */,
 				B95EAF1B1BE05DCA00EE1528 /* InitializeMeTests.xctest */,
-				B9B6A2011C5D3FDD009205B2 /* Phoenix.xcplugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -256,23 +243,6 @@
 			productReference = B95EAF1B1BE05DCA00EE1528 /* InitializeMeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B9B6A2001C5D3FDD009205B2 /* Phoenix */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B9B6A20F1C5D3FDD009205B2 /* Build configuration list for PBXNativeTarget "Phoenix" */;
-			buildPhases = (
-				B9B6A1FD1C5D3FDD009205B2 /* Sources */,
-				B9B6A1FE1C5D3FDD009205B2 /* Resources */,
-				B9B6A1FF1C5D3FDD009205B2 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Phoenix;
-			productName = Phoenix;
-			productReference = B9B6A2011C5D3FDD009205B2 /* Phoenix.xcplugin */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -288,9 +258,6 @@
 					B95EAF1A1BE05DCA00EE1528 = {
 						CreatedOnToolsVersion = 7.1;
 						TestTargetID = B95EAEEC1BE03EA900EE1528;
-					};
-					B9B6A2001C5D3FDD009205B2 = {
-						CreatedOnToolsVersion = 7.2;
 					};
 				};
 			};
@@ -309,7 +276,6 @@
 			targets = (
 				B95EAEEC1BE03EA900EE1528 /* InitializeMe */,
 				B95EAF1A1BE05DCA00EE1528 /* InitializeMeTests */,
-				B9B6A2001C5D3FDD009205B2 /* Phoenix */,
 			);
 		};
 /* End PBXProject section */
@@ -325,13 +291,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B95EAF191BE05DCA00EE1528 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B9B6A1FE1C5D3FDD009205B2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -369,13 +328,6 @@
 				B91743051BE3252B005477FF /* KAWarningTests.m in Sources */,
 				B90ACDCA1C5D34D600E2E34B /* SwiftInititalizerTests.m in Sources */,
 				B95EAF1E1BE05DCA00EE1528 /* ObjectiveCInitializeTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B9B6A1FD1C5D3FDD009205B2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,36 +471,6 @@
 			};
 			name = Release;
 		};
-		B9B6A2101C5D3FDD009205B2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DEPLOYMENT_LOCATION = YES;
-				DSTROOT = "$(HOME)";
-				INFOPLIST_FILE = Phoenix/Info.plist;
-				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = pear.Phoenix;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xcplugin;
-			};
-			name = Debug;
-		};
-		B9B6A2111C5D3FDD009205B2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DEPLOYMENT_LOCATION = YES;
-				DSTROOT = "$(HOME)";
-				INFOPLIST_FILE = Phoenix/Info.plist;
-				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = pear.Phoenix;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xcplugin;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -578,14 +500,6 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
-		};
-		B9B6A20F1C5D3FDD009205B2 /* Build configuration list for PBXNativeTarget "Phoenix" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B9B6A2101C5D3FDD009205B2 /* Debug */,
-				B9B6A2111C5D3FDD009205B2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
