@@ -16,13 +16,46 @@
 
 @implementation SwiftInititalizerTests
 
-- (void)testNoParenthesis {
+- (void)testOneProperty {
+    NSString *expectedOutput = @"init(window: NSWindow) {\n"
+    "\tself.window = window\n"
+    "}";
+    
+    NSString *input = @"let window: NSWindow";
+    
+    id properties = [[[PropertyParser alloc] initWithString:input] properties];
+    
+    [properties makeObjectsPerformSelector:@selector(parse)];
+    
+    NSString *output = [[KAInitializerWriterFactory initializerWriterForProperties:properties] initializer];
+    
+    XCTAssert([output isEqualToString:expectedOutput]);
+}
+
+- (void)testTwoProperties {
     NSString *expectedOutput = @"init(window: NSWindow, ello: NSWindow) {\n"
     "\tself.window = window\n"
     "\tself.ello = ello\n"
     "}";
     
     NSString *input = @"let window: NSWindow\nlet ello: NSWindow";
+    
+    id properties = [[[PropertyParser alloc] initWithString:input] properties];
+    
+    [properties makeObjectsPerformSelector:@selector(parse)];
+    
+    NSString *output = [[KAInitializerWriterFactory initializerWriterForProperties:properties] initializer];
+    
+    XCTAssert([output isEqualToString:expectedOutput]);
+}
+
+- (void)testTwoPropertiesOneOptional {
+    NSString *expectedOutput = @"init(window: NSWindow?, ello: NSWindow) {\n"
+    "\tself.window = window\n"
+    "\tself.ello = ello\n"
+    "}";
+    
+    NSString *input = @"let window: NSWindow?\nlet ello: NSWindow";
     
     id properties = [[[PropertyParser alloc] initWithString:input] properties];
     
