@@ -13,8 +13,7 @@
 
 @interface InitializeMePlugin()
 
-@property (nonatomic, strong, readwrite) NSBundle *bundle;
-
+@property (nonatomic) NSBundle *bundle;
 @property (nonatomic) NSString *currentlySelectedText;
 
 @end
@@ -26,12 +25,12 @@
 }
 
 - (id)initWithBundle:(NSBundle *)plugin {
-    if (self = [super init]) {
+    self = [super init];
+    if (self) {
         
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleSelection:) name:@"DVTSourceExpressionSelectedExpressionDidChangeNotification" object:nil];
-        
-        // reference to plugin's bundle, for resource access
         self.bundle = plugin;
+
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleSelection:) name:@"DVTSourceExpressionSelectedExpressionDidChangeNotification" object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(didApplicationFinishLaunchingNotification:)
                                                      name:NSApplicationDidFinishLaunchingNotification
@@ -47,15 +46,13 @@
         self.currentlySelectedText = [[textView string] substringWithRange:[textView selectedRange]];
     }
     @catch (NSException *exception) {
-        
+        NSLog(@"InitializeMe - %@", exception);
     }
 }
 
-- (void)didApplicationFinishLaunchingNotification:(NSNotification*)noti {
+- (void)didApplicationFinishLaunchingNotification:(NSNotification *)noti {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NSApplicationDidFinishLaunchingNotification object:nil];
     
-    // Create menu items, initialize UI, etc.
-    // Sample Menu Item:
     NSMenuItem *menuItem = [[NSApp mainMenu] itemWithTitle:@"Edit"];
     if (menuItem) {
         [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
@@ -72,6 +69,13 @@
 - (void)doMenuAction {
     const PropertyParser *parser = [[PropertyParser alloc] initWithString:self.currentlySelectedText];
     NSArray <Property *> *properties = [parser properties];
+    
+    if (properties.count == 0) {
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert setMessageText:@"You did not select any properties!"];
+        [alert runModal];
+        return;
+    }
     
     const id <KAInitializerWriter> writer = [KAInitializerWriterFactory initializerWriterForProperties:properties];
     
