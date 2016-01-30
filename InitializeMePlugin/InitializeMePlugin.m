@@ -7,7 +7,9 @@
 //
 
 #import "InitializeMePlugin.h"
-#import <objc/objc.h>
+#import "Property.h"
+#import "PropertyParser.h"
+#import "KAInitializerWriterFactory.h"
 
 @interface InitializeMePlugin()
 
@@ -50,7 +52,6 @@
 }
 
 - (void)didApplicationFinishLaunchingNotification:(NSNotification*)noti {
-    //removeObserver
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NSApplicationDidFinishLaunchingNotification object:nil];
     
     // Create menu items, initialize UI, etc.
@@ -59,16 +60,33 @@
     if (menuItem) {
         [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
         NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Make Initializer And Copy" action:@selector(doMenuAction) keyEquivalent:@""];
-        //[actionMenuItem setKeyEquivalentModifierMask:NSShiftKeyMask | NSControlKeyMask];
+
+        [actionMenuItem setKeyEquivalentModifierMask: NSShiftKeyMask | NSCommandKeyMask];
+        [actionMenuItem setKeyEquivalent:@"x"];
+        
         [actionMenuItem setTarget:self];
         [[menuItem submenu] addItem:actionMenuItem];
     }
 }
 
 - (void)doMenuAction {
-    NSAlert *alert = [[NSAlert alloc] init];
-    [alert setMessageText:@"Hello, World"];
-    [alert runModal];
+    const PropertyParser *parser = [[PropertyParser alloc] initWithString:self.currentlySelectedText];
+    NSArray <Property *> *properties = [parser properties];
+    
+    
+    
+    const id <KAInitializerWriter> writer = [KAInitializerWriterFactory initializerWriterForProperties:properties];
+    
+    NSString *initializer = [writer initializer];
+    
+    
+    
+    NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
+    [pasteboard clearContents];
+    [pasteboard writeObjects:@[initializer]];
+    
+    
+
 }
 
 - (void)dealloc {
