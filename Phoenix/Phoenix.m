@@ -13,7 +13,7 @@
 
 @interface Phoenix()
 
-@property (nonatomic, strong, readwrite) NSBundle *bundle;
+@property (nonatomic) NSBundle *bundle;
 @property (nonatomic) NSString *currentlySelectedText;
 
 @end
@@ -30,7 +30,10 @@
         
         self.bundle = plugin;
         
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleSelection:) name:@"DVTSourceExpressionSelectedExpressionDidChangeNotification" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleSelection:)
+                                                     name:@"DVTSourceExpressionSelectedExpressionDidChangeNotification"
+                                                   object:nil];
+        
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(didApplicationFinishLaunchingNotification:)
                                                      name:NSApplicationDidFinishLaunchingNotification
