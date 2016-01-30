@@ -29,6 +29,22 @@
 		B9634C3B1C5D208400FBBD46 /* InitializeMePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = B9634C3A1C5D208400FBBD46 /* InitializeMePlugin.m */; };
 		B9634C3E1C5D208400FBBD46 /* NSObject_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B9634C3D1C5D208400FBBD46 /* NSObject_Extension.m */; };
 		B9B73BC91BE315D400617A3F /* KAPropertyWarningGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B73BC81BE315D400617A3F /* KAPropertyWarningGenerator.m */; };
+		B9DCDF061C5D2B6F00BFFF60 /* KAInitializerWriterFactory.h in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF141BE0556600EE1528 /* KAInitializerWriterFactory.h */; };
+		B9DCDF071C5D2B6F00BFFF60 /* KAInitializerWriterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF151BE0556600EE1528 /* KAInitializerWriterFactory.m */; };
+		B9DCDF081C5D2B6F00BFFF60 /* KAObjectiveCInitializerWriter.h in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF111BE0554300EE1528 /* KAObjectiveCInitializerWriter.h */; };
+		B9DCDF091C5D2B6F00BFFF60 /* KAObjectiveCInitializerWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF121BE0554300EE1528 /* KAObjectiveCInitializerWriter.m */; };
+		B9DCDF0A1C5D2B6F00BFFF60 /* NSArray+Extensions.h in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF0A1BE0453600EE1528 /* NSArray+Extensions.h */; };
+		B9DCDF0B1C5D2B6F00BFFF60 /* NSArray+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF0B1BE0453600EE1528 /* NSArray+Extensions.m */; };
+		B9DCDF0C1C5D2B8200BFFF60 /* KAPropertyWarningGenerator.h in Sources */ = {isa = PBXBuildFile; fileRef = B9B73BC71BE315D400617A3F /* KAPropertyWarningGenerator.h */; };
+		B9DCDF0D1C5D2B8200BFFF60 /* KAPropertyWarningGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B73BC81BE315D400617A3F /* KAPropertyWarningGenerator.m */; };
+		B9DCDF0E1C5D2B8200BFFF60 /* KAWarning.h in Sources */ = {isa = PBXBuildFile; fileRef = B91742FE1BE31A8D005477FF /* KAWarning.h */; };
+		B9DCDF0F1C5D2B8200BFFF60 /* KAWarning.m in Sources */ = {isa = PBXBuildFile; fileRef = B91742FF1BE31A8D005477FF /* KAWarning.m */; };
+		B9DCDF101C5D2B8200BFFF60 /* KAWarning+Properties.h in Sources */ = {isa = PBXBuildFile; fileRef = B91743011BE31F07005477FF /* KAWarning+Properties.h */; };
+		B9DCDF111C5D2B8200BFFF60 /* KAWarning+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B91743021BE31F07005477FF /* KAWarning+Properties.m */; };
+		B9DCDF121C5D2B8B00BFFF60 /* PropertyParser.h in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF021BE03F4000EE1528 /* PropertyParser.h */; };
+		B9DCDF131C5D2B8B00BFFF60 /* PropertyParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF031BE03F4000EE1528 /* PropertyParser.m */; };
+		B9DCDF141C5D2B8B00BFFF60 /* Property.h in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF061BE0417400EE1528 /* Property.h */; };
+		B9DCDF151C5D2B8B00BFFF60 /* Property.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF071BE0417400EE1528 /* Property.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -430,6 +446,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9DCDF121C5D2B8B00BFFF60 /* PropertyParser.h in Sources */,
+				B9DCDF131C5D2B8B00BFFF60 /* PropertyParser.m in Sources */,
+				B9DCDF141C5D2B8B00BFFF60 /* Property.h in Sources */,
+				B9DCDF151C5D2B8B00BFFF60 /* Property.m in Sources */,
+				B9DCDF0C1C5D2B8200BFFF60 /* KAPropertyWarningGenerator.h in Sources */,
+				B9DCDF0D1C5D2B8200BFFF60 /* KAPropertyWarningGenerator.m in Sources */,
+				B9DCDF0E1C5D2B8200BFFF60 /* KAWarning.h in Sources */,
+				B9DCDF0F1C5D2B8200BFFF60 /* KAWarning.m in Sources */,
+				B9DCDF101C5D2B8200BFFF60 /* KAWarning+Properties.h in Sources */,
+				B9DCDF111C5D2B8200BFFF60 /* KAWarning+Properties.m in Sources */,
+				B9DCDF061C5D2B6F00BFFF60 /* KAInitializerWriterFactory.h in Sources */,
+				B9DCDF071C5D2B6F00BFFF60 /* KAInitializerWriterFactory.m in Sources */,
+				B9DCDF081C5D2B6F00BFFF60 /* KAObjectiveCInitializerWriter.h in Sources */,
+				B9DCDF091C5D2B6F00BFFF60 /* KAObjectiveCInitializerWriter.m in Sources */,
+				B9DCDF0A1C5D2B6F00BFFF60 /* NSArray+Extensions.h in Sources */,
+				B9DCDF0B1C5D2B6F00BFFF60 /* NSArray+Extensions.m in Sources */,
 				B9634C3B1C5D208400FBBD46 /* InitializeMePlugin.m in Sources */,
 				B9634C3E1C5D208400FBBD46 /* NSObject_Extension.m in Sources */,
 			);
@@ -642,6 +674,7 @@
 				B9634C411C5D208400FBBD46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
