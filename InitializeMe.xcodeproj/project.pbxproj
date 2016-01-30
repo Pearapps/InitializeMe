@@ -23,6 +23,11 @@
 		B95EAF1E1BE05DCA00EE1528 /* InitializeMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF1D1BE05DCA00EE1528 /* InitializeMeTests.m */; };
 		B95EAF271BE073EF00EE1528 /* KARootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF261BE073EF00EE1528 /* KARootViewController.m */; };
 		B95EAF461BE08DEC00EE1528 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B95EAF451BE08DEC00EE1528 /* MainMenu.xib */; };
+		B9634C321C5D208400FBBD46 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9634C311C5D208400FBBD46 /* AppKit.framework */; };
+		B9634C341C5D208400FBBD46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9634C331C5D208400FBBD46 /* Foundation.framework */; };
+		B9634C381C5D208400FBBD46 /* InitializeMePlugin.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = B9634C371C5D208400FBBD46 /* InitializeMePlugin.xcscheme */; };
+		B9634C3B1C5D208400FBBD46 /* InitializeMePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = B9634C3A1C5D208400FBBD46 /* InitializeMePlugin.m */; };
+		B9634C3E1C5D208400FBBD46 /* NSObject_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B9634C3D1C5D208400FBBD46 /* NSObject_Extension.m */; };
 		B9B73BC91BE315D400617A3F /* KAPropertyWarningGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B73BC81BE315D400617A3F /* KAPropertyWarningGenerator.m */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +73,15 @@
 		B95EAF251BE073EF00EE1528 /* KARootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KARootViewController.h; sourceTree = "<group>"; };
 		B95EAF261BE073EF00EE1528 /* KARootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KARootViewController.m; sourceTree = "<group>"; };
 		B95EAF451BE08DEC00EE1528 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		B9634C2F1C5D208400FBBD46 /* InitializeMePlugin.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InitializeMePlugin.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9634C311C5D208400FBBD46 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		B9634C331C5D208400FBBD46 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		B9634C371C5D208400FBBD46 /* InitializeMePlugin.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = InitializeMePlugin.xcscheme; path = InitializeMePlugin.xcodeproj/xcshareddata/xcschemes/InitializeMePlugin.xcscheme; sourceTree = SOURCE_ROOT; };
+		B9634C391C5D208400FBBD46 /* InitializeMePlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InitializeMePlugin.h; sourceTree = "<group>"; };
+		B9634C3A1C5D208400FBBD46 /* InitializeMePlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InitializeMePlugin.m; sourceTree = "<group>"; };
+		B9634C3C1C5D208400FBBD46 /* NSObject_Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSObject_Extension.h; sourceTree = "<group>"; };
+		B9634C3D1C5D208400FBBD46 /* NSObject_Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSObject_Extension.m; sourceTree = "<group>"; };
+		B9634C3F1C5D208400FBBD46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9B73BC71BE315D400617A3F /* KAPropertyWarningGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAPropertyWarningGenerator.h; sourceTree = "<group>"; };
 		B9B73BC81BE315D400617A3F /* KAPropertyWarningGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAPropertyWarningGenerator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,14 +101,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B9634C2D1C5D208400FBBD46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9634C321C5D208400FBBD46 /* AppKit.framework in Frameworks */,
+				B9634C341C5D208400FBBD46 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		B95EAEE41BE03EA900EE1528 = {
 			isa = PBXGroup;
 			children = (
-				B95EAEEF1BE03EA900EE1528 /* InitializeMe */,
-				B95EAF1C1BE05DCA00EE1528 /* InitializeMeTests */,
+				B9634C431C5D20A900FBBD46 /* Mac App */,
+				B9634C441C5D20B100FBBD46 /* Plugin  */,
+				B9634C301C5D208400FBBD46 /* Frameworks */,
 				B95EAEEE1BE03EA900EE1528 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,6 +128,7 @@
 			children = (
 				B95EAEED1BE03EA900EE1528 /* InitializeMe.app */,
 				B95EAF1B1BE05DCA00EE1528 /* InitializeMeTests.xctest */,
+				B9634C2F1C5D208400FBBD46 /* InitializeMePlugin.xcplugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -188,6 +213,53 @@
 			path = InitializeMeTests;
 			sourceTree = "<group>";
 		};
+		B9634C301C5D208400FBBD46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9634C311C5D208400FBBD46 /* AppKit.framework */,
+				B9634C331C5D208400FBBD46 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B9634C351C5D208400FBBD46 /* InitializeMePlugin */ = {
+			isa = PBXGroup;
+			children = (
+				B9634C391C5D208400FBBD46 /* InitializeMePlugin.h */,
+				B9634C3A1C5D208400FBBD46 /* InitializeMePlugin.m */,
+				B9634C3C1C5D208400FBBD46 /* NSObject_Extension.h */,
+				B9634C3D1C5D208400FBBD46 /* NSObject_Extension.m */,
+				B9634C3F1C5D208400FBBD46 /* Info.plist */,
+				B9634C361C5D208400FBBD46 /* Supporting Files */,
+			);
+			path = InitializeMePlugin;
+			sourceTree = "<group>";
+		};
+		B9634C361C5D208400FBBD46 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B9634C371C5D208400FBBD46 /* InitializeMePlugin.xcscheme */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B9634C431C5D20A900FBBD46 /* Mac App */ = {
+			isa = PBXGroup;
+			children = (
+				B95EAEEF1BE03EA900EE1528 /* InitializeMe */,
+				B95EAF1C1BE05DCA00EE1528 /* InitializeMeTests */,
+			);
+			name = "Mac App";
+			sourceTree = "<group>";
+		};
+		B9634C441C5D20B100FBBD46 /* Plugin  */ = {
+			isa = PBXGroup;
+			children = (
+				B9634C351C5D208400FBBD46 /* InitializeMePlugin */,
+			);
+			name = "Plugin ";
+			sourceTree = "<group>";
+		};
 		B9B73BCA1BE3166600617A3F /* KAPropertyWarningGenerator */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +311,23 @@
 			productReference = B95EAF1B1BE05DCA00EE1528 /* InitializeMeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		B9634C2E1C5D208400FBBD46 /* InitializeMePlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9634C421C5D208400FBBD46 /* Build configuration list for PBXNativeTarget "InitializeMePlugin" */;
+			buildPhases = (
+				B9634C2B1C5D208400FBBD46 /* Sources */,
+				B9634C2C1C5D208400FBBD46 /* Resources */,
+				B9634C2D1C5D208400FBBD46 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InitializeMePlugin;
+			productName = InitializeMePlugin;
+			productReference = B9634C2F1C5D208400FBBD46 /* InitializeMePlugin.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -254,6 +343,9 @@
 					B95EAF1A1BE05DCA00EE1528 = {
 						CreatedOnToolsVersion = 7.1;
 						TestTargetID = B95EAEEC1BE03EA900EE1528;
+					};
+					B9634C2E1C5D208400FBBD46 = {
+						CreatedOnToolsVersion = 7.2;
 					};
 				};
 			};
@@ -272,6 +364,7 @@
 			targets = (
 				B95EAEEC1BE03EA900EE1528 /* InitializeMe */,
 				B95EAF1A1BE05DCA00EE1528 /* InitializeMeTests */,
+				B9634C2E1C5D208400FBBD46 /* InitializeMePlugin */,
 			);
 		};
 /* End PBXProject section */
@@ -290,6 +383,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9634C2C1C5D208400FBBD46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9634C381C5D208400FBBD46 /* InitializeMePlugin.xcscheme in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +423,15 @@
 			files = (
 				B91743051BE3252B005477FF /* KAWarningTests.m in Sources */,
 				B95EAF1E1BE05DCA00EE1528 /* InitializeMeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9634C2B1C5D208400FBBD46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9634C3B1C5D208400FBBD46 /* InitializeMePlugin.m in Sources */,
+				B9634C3E1C5D208400FBBD46 /* NSObject_Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +575,36 @@
 			};
 			name = Release;
 		};
+		B9634C401C5D208400FBBD46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = InitializeMePlugin/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = pear.InitializeMePlugin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		B9634C411C5D208400FBBD46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = InitializeMePlugin/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = pear.InitializeMePlugin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -494,6 +634,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		B9634C421C5D208400FBBD46 /* Build configuration list for PBXNativeTarget "InitializeMePlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9634C401C5D208400FBBD46 /* Debug */,
+				B9634C411C5D208400FBBD46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
