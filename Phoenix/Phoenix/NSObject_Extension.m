@@ -1,14 +1,14 @@
 //
 //  NSObject_Extension.m
-//  InitializeMePlugin
+//  Phoenix
 //
 //  Created by Kenneth Parker Ackerson on 1/30/16.
-//  Copyright © 2016 Kenneth Parker Ackerson. All rights reserved.
+//  Copyright © 2016 Kenneth Ackerson. All rights reserved.
 //
 
 
 #import "NSObject_Extension.h"
-#import "InitializeMePlugin.h"
+#import "Phoenix.h"
 
 @implementation NSObject (Xcode_Plugin_Template_Extension)
 
@@ -18,7 +18,7 @@
     NSString *currentApplicationName = [[NSBundle mainBundle] infoDictionary][@"CFBundleName"];
     if ([currentApplicationName isEqual:@"Xcode"]) {
         dispatch_once(&onceToken, ^{
-            sharedPlugin = [[InitializeMePlugin alloc] initWithBundle:plugin];
+            sharedPlugin = [[Phoenix alloc] initWithBundle:plugin];
         });
     }
 }

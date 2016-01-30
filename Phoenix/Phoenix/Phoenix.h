@@ -1,18 +1,18 @@
 //
-//  InitializeMePlugin.h
-//  InitializeMePlugin
+//  Phoenix.h
+//  Phoenix
 //
 //  Created by Kenneth Parker Ackerson on 1/30/16.
-//  Copyright © 2016 Kenneth Parker Ackerson. All rights reserved.
+//  Copyright © 2016 Kenneth Ackerson. All rights reserved.
 //
 
 #import <AppKit/AppKit.h>
 
-@class InitializeMePlugin;
+@class Phoenix;
 
-static InitializeMePlugin *sharedPlugin;
+static Phoenix *sharedPlugin;
 
-@interface InitializeMePlugin : NSObject
+@interface Phoenix : NSObject
 
 + (instancetype)sharedPlugin;
 - (id)initWithBundle:(NSBundle *)plugin;

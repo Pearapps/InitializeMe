@@ -1,35 +1,35 @@
 //
-//  InitializeMePlugin.m
-//  InitializeMePlugin
+//  Phoenix.m
+//  Phoenix
 //
 //  Created by Kenneth Parker Ackerson on 1/30/16.
 //  Copyright © 2016 Kenneth Parker Ackerson. All rights reserved.
 //
 
-#import "InitializeMePlugin.h"
+#import "Phoenix.h"
 #import "Property.h"
 #import "PropertyParser.h"
 #import "KAInitializerWriterFactory.h"
 
-@interface InitializeMePlugin()
+@interface Phoenix()
 
-@property (nonatomic) NSBundle *bundle;
+@property (nonatomic, strong, readwrite) NSBundle *bundle;
 @property (nonatomic) NSString *currentlySelectedText;
 
 @end
 
-@implementation InitializeMePlugin
+@implementation Phoenix
 
 + (instancetype)sharedPlugin {
     return sharedPlugin;
 }
 
-- (id)initWithBundle:(NSBundle *)plugin {
+- (instancetype)initWithBundle:(NSBundle *)plugin {
     self = [super init];
     if (self) {
         
         self.bundle = plugin;
-
+        
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleSelection:) name:@"DVTSourceExpressionSelectedExpressionDidChangeNotification" object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(didApplicationFinishLaunchingNotification:)
@@ -57,7 +57,7 @@
     if (menuItem) {
         [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
         NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Make Initializer And Copy" action:@selector(doMenuAction) keyEquivalent:@""];
-
+        
         [actionMenuItem setKeyEquivalentModifierMask: NSShiftKeyMask | NSCommandKeyMask];
         [actionMenuItem setKeyEquivalent:@"x"];
         
@@ -89,5 +89,4 @@
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
-
 @end

@@ -1,6 +1,6 @@
 //
 //  NSObject_Extension.h
-//  InitializeMePlugin
+//  Phoenix
 //
 //  Created by Kenneth Parker Ackerson on 1/30/16.
 //  Copyright © 2016 Kenneth Parker Ackerson. All rights reserved.

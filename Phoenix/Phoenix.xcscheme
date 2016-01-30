@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "890A4B3E171F031300AFE577"
-               BuildableName = "InitializeMePlugin.xcplugin"
-               BlueprintName = "InitializeMePlugin"
-               ReferencedContainer = "container:InitializeMePlugin.xcodeproj">
+               BuildableName = "Phoenix.xcplugin"
+               BlueprintName = "Phoenix"
+               ReferencedContainer = "container:Phoenix.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8966AFCA173EB7BF004150C0"
-               BuildableName = "InitializeMePluginTests.xctest"
-               BlueprintName = "InitializeMePluginTests"
-               ReferencedContainer = "container:InitializeMePlugin.xcodeproj">
+               BuildableName = "PhoenixTests.xctest"
+               BlueprintName = "PhoenixTests"
+               ReferencedContainer = "container:Phoenix.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "890A4B3E171F031300AFE577"
-            BuildableName = "InitializeMePlugin.xcplugin"
-            BlueprintName = "InitializeMePlugin"
-            ReferencedContainer = "container:InitializeMePlugin.xcodeproj">
+            BuildableName = "Phoenix.xcplugin"
+            BlueprintName = "Phoenix"
+            ReferencedContainer = "container:Phoenix.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
