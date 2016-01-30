@@ -73,20 +73,13 @@
     const PropertyParser *parser = [[PropertyParser alloc] initWithString:self.currentlySelectedText];
     NSArray <Property *> *properties = [parser properties];
     
-    
-    
     const id <KAInitializerWriter> writer = [KAInitializerWriterFactory initializerWriterForProperties:properties];
     
     NSString *initializer = [writer initializer];
     
-    
-    
     NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
     [pasteboard clearContents];
     [pasteboard writeObjects:@[initializer]];
-    
-    
-
 }
 
 - (void)dealloc {
