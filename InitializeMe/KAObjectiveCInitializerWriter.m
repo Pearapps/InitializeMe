@@ -64,7 +64,6 @@
             return ;
         }
         
-        
         if (idx > 0) {
             [initializerString appendString:property.variable];
         }

@@ -8,6 +8,7 @@
 
 #import "KAInitializerWriterFactory.h"
 #import "KAObjectiveCInitializerWriter.h"
+#import "KASwiftInitializerWriter.h"
 
 @implementation KAInitializerWriterFactory
 
@@ -16,6 +17,9 @@
     
     if (property.propertyType == PropertyTypeObjectiveC) {
         return [[KAObjectiveCInitializerWriter alloc] initWithProperties:properties];
+    }
+    else if (property.propertyType == PropertyTypeSwift) {
+        return [[KASwiftInitializerWriter alloc] initWithProperties:properties];
     }
     
     return nil;
