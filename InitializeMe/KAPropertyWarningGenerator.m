@@ -30,6 +30,12 @@
 }
 
 - (NSArray <KAWarning *> *)warnings {
+    if (self.properties.firstObject) {
+        if (self.properties.firstObject.propertyType == PropertyTypeSwift) {
+            return @[];
+        }
+    }
+    
     return [NSArray flattenArray:[self.properties transformedArrayWithBlock:^id(Property *property) {
         return [KAWarning warningForProperty:property];
     }]];
