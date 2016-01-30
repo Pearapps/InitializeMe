@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B90ACDCA1C5D34D600E2E34B /* SwiftInititalizerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B90ACDC91C5D34D600E2E34B /* SwiftInititalizerTests.m */; };
 		B91743001BE31A8D005477FF /* KAWarning.m in Sources */ = {isa = PBXBuildFile; fileRef = B91742FF1BE31A8D005477FF /* KAWarning.m */; };
 		B91743031BE31F07005477FF /* KAWarning+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B91743021BE31F07005477FF /* KAWarning+Properties.m */; };
 		B91743051BE3252B005477FF /* KAWarningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B91743041BE3252B005477FF /* KAWarningTests.m */; };
@@ -20,7 +21,7 @@
 		B95EAF0C1BE0453600EE1528 /* NSArray+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF0B1BE0453600EE1528 /* NSArray+Extensions.m */; };
 		B95EAF131BE0554300EE1528 /* KAObjectiveCInitializerWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF121BE0554300EE1528 /* KAObjectiveCInitializerWriter.m */; };
 		B95EAF161BE0556600EE1528 /* KAInitializerWriterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF151BE0556600EE1528 /* KAInitializerWriterFactory.m */; };
-		B95EAF1E1BE05DCA00EE1528 /* InitializeMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF1D1BE05DCA00EE1528 /* InitializeMeTests.m */; };
+		B95EAF1E1BE05DCA00EE1528 /* ObjectiveCInitializeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF1D1BE05DCA00EE1528 /* ObjectiveCInitializeTests.m */; };
 		B95EAF271BE073EF00EE1528 /* KARootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B95EAF261BE073EF00EE1528 /* KARootViewController.m */; };
 		B95EAF461BE08DEC00EE1528 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B95EAF451BE08DEC00EE1528 /* MainMenu.xib */; };
 		B964A9171C541DE70082DD37 /* KASwiftInitializerWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = B964A9161C541DE70082DD37 /* KASwiftInitializerWriter.m */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B90ACDC91C5D34D600E2E34B /* SwiftInititalizerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwiftInititalizerTests.m; sourceTree = "<group>"; };
 		B91742FE1BE31A8D005477FF /* KAWarning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAWarning.h; sourceTree = "<group>"; };
 		B91742FF1BE31A8D005477FF /* KAWarning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAWarning.m; sourceTree = "<group>"; };
 		B91743011BE31F07005477FF /* KAWarning+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KAWarning+Properties.h"; sourceTree = "<group>"; };
@@ -64,7 +66,7 @@
 		B95EAF141BE0556600EE1528 /* KAInitializerWriterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAInitializerWriterFactory.h; sourceTree = "<group>"; };
 		B95EAF151BE0556600EE1528 /* KAInitializerWriterFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAInitializerWriterFactory.m; sourceTree = "<group>"; };
 		B95EAF1B1BE05DCA00EE1528 /* InitializeMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InitializeMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B95EAF1D1BE05DCA00EE1528 /* InitializeMeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InitializeMeTests.m; sourceTree = "<group>"; };
+		B95EAF1D1BE05DCA00EE1528 /* ObjectiveCInitializeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCInitializeTests.m; sourceTree = "<group>"; };
 		B95EAF1F1BE05DCA00EE1528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B95EAF251BE073EF00EE1528 /* KARootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KARootViewController.h; sourceTree = "<group>"; };
 		B95EAF261BE073EF00EE1528 /* KARootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KARootViewController.m; sourceTree = "<group>"; };
@@ -184,7 +186,8 @@
 		B95EAF1C1BE05DCA00EE1528 /* InitializeMeTests */ = {
 			isa = PBXGroup;
 			children = (
-				B95EAF1D1BE05DCA00EE1528 /* InitializeMeTests.m */,
+				B95EAF1D1BE05DCA00EE1528 /* ObjectiveCInitializeTests.m */,
+				B90ACDC91C5D34D600E2E34B /* SwiftInititalizerTests.m */,
 				B91743041BE3252B005477FF /* KAWarningTests.m */,
 				B95EAF1F1BE05DCA00EE1528 /* Info.plist */,
 			);
@@ -343,7 +346,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B91743051BE3252B005477FF /* KAWarningTests.m in Sources */,
-				B95EAF1E1BE05DCA00EE1528 /* InitializeMeTests.m in Sources */,
+				B90ACDCA1C5D34D600E2E34B /* SwiftInititalizerTests.m in Sources */,
+				B95EAF1E1BE05DCA00EE1528 /* ObjectiveCInitializeTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
