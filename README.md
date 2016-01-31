@@ -31,5 +31,5 @@ You should then restart Xcode, and enjoy!
 
 ### What is next
 
-- I want to add the ability to copy just the declaration
+- I want to add the ability to copy just the declaration of the initializer.
 
