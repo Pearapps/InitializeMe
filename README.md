@@ -20,8 +20,11 @@ You can install Phoenix by either...
 
 You should then restart Xcode, and enjoy!
 
+### Phoenix
+
 ![alt tag](https://raw.githubusercontent.com/Pearapps/InitializeMe/master/Phoenix/Phoenix.png)
 
+### InitializeMe
 ![alt tag](https://github.com/Pearapps/InitializeMe/blob/master/screenshot.png)
 
 
