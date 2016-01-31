@@ -12,6 +12,14 @@ Also provided here is **Phoenix** - an Xcode plugin that allows you select the p
 - Go to Edit and then click Make Initializer And Copy OR use the key command CMD - Shift - X.
 - Paste your initializer wherever you wish 
 
+You can install Phoenix by either...
+
+- Install via [alcatraz](http://alcatraz.io)
+- Go to [releases](https://github.com/Pearapps/InitializeMe/releases) and download the plugin and put it in `~/Library/Application Support/Developer/Shared/Xcode/Plug-ins`
+- You can build this project and it will be installed.
+
+You should then restart Xcode, and enjoy!
+
 ![alt tag](https://raw.githubusercontent.com/Pearapps/InitializeMe/master/Phoenix/Phoenix.png)
 
 ![alt tag](https://github.com/Pearapps/InitializeMe/blob/master/screenshot.png)
