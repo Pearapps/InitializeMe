@@ -25,6 +25,7 @@ You should then restart Xcode, and enjoy!
 ![alt tag](https://raw.githubusercontent.com/Pearapps/InitializeMe/master/Phoenix/Phoenix.png)
 
 ### InitializeMe
+
 ![alt tag](https://github.com/Pearapps/InitializeMe/blob/master/screenshot.png)
 
 
