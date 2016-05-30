@@ -10,6 +10,7 @@
 #import "Property.h"
 #import "PropertyParser.h"
 #import "KAInitializerWriterFactory.h"
+#import "KATimeEstimator.h"
 
 @interface Phoenix()
 
@@ -87,9 +88,16 @@
     NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
     [pasteboard clearContents];
     [pasteboard writeObjects:@[initializer]];
+    
+    KATimeEstimator *timeEstimator = [[KATimeEstimator alloc] initWithNumberOfProperties:properties.count];
+    
+    const NSInteger seconds = [timeEstimator estimatedSecondsSaved];
+    
+    [[NSUserDefaults standardUserDefaults] setInteger:seconds forKey:@"seconds_saved"];
 }
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
+
 @end
