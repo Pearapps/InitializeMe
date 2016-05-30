@@ -22,6 +22,7 @@
 		B9B6A2501C5D422F009205B2 /* Property.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6A2461C5D422F009205B2 /* Property.m */; };
 		B9B6A2511C5D422F009205B2 /* PropertyParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6A2481C5D422F009205B2 /* PropertyParser.m */; };
 		B9B6A26F1C5D42D1009205B2 /* Phoenix.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = B9B6A26E1C5D42D1009205B2 /* Phoenix.xcscheme */; };
+		B9F1A9741CFBCF3000F45FC5 /* KATimeEstimator.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F1A9731CFBCF3000F45FC5 /* KATimeEstimator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,8 @@
 		B9B6A2471C5D422F009205B2 /* PropertyParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyParser.h; sourceTree = "<group>"; };
 		B9B6A2481C5D422F009205B2 /* PropertyParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyParser.m; sourceTree = "<group>"; };
 		B9B6A26E1C5D42D1009205B2 /* Phoenix.xcscheme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Phoenix.xcscheme; sourceTree = "<group>"; };
+		B9F1A9721CFBCF3000F45FC5 /* KATimeEstimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KATimeEstimator.h; sourceTree = "<group>"; };
+		B9F1A9731CFBCF3000F45FC5 /* KATimeEstimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KATimeEstimator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,8 @@
 				B9B6A2461C5D422F009205B2 /* Property.m */,
 				B9B6A2471C5D422F009205B2 /* PropertyParser.h */,
 				B9B6A2481C5D422F009205B2 /* PropertyParser.m */,
+				B9F1A9721CFBCF3000F45FC5 /* KATimeEstimator.h */,
+				B9F1A9731CFBCF3000F45FC5 /* KATimeEstimator.m */,
 			);
 			path = "Shared Code";
 			sourceTree = SOURCE_ROOT;
@@ -219,6 +224,7 @@
 				B9B6A24D1C5D422F009205B2 /* KAWarning+Properties.m in Sources */,
 				B9B6A2191C5D40CC009205B2 /* Phoenix.m in Sources */,
 				B9B6A24B1C5D422F009205B2 /* KAPropertyWarningGenerator.m in Sources */,
+				B9F1A9741CFBCF3000F45FC5 /* KATimeEstimator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
