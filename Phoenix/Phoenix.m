@@ -67,7 +67,37 @@
         
         [actionMenuItem setTarget:self];
         [[menuItem submenu] addItem:actionMenuItem];
+        
+        NSMenuItem *secondsActionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Phoenix stats" action:@selector(seconds) keyEquivalent:@""];
+        
+        [secondsActionMenuItem setTarget:self];
+        [[menuItem submenu] addItem:secondsActionMenuItem];
     }
+}
+
+- (void)seconds {
+    NSAlert *alert = [[NSAlert alloc] init];
+    
+    const NSInteger seconds = [[NSUserDefaults standardUserDefaults] integerForKey:@"seconds_saved"];
+    
+    NSString *displayString = [NSString stringWithFormat:@"Time saved: %ld seconds", seconds];
+    
+    // This is super shitty code /shrug
+    
+    if (seconds > 60) {
+        displayString = [NSString stringWithFormat:@"Time saved: %0.2f minutes", seconds / 60.0];
+    }
+    
+    if (seconds > 60 * 60) {
+        displayString = [NSString stringWithFormat:@"Time saved: %0.2f hours", (seconds / 60.0) / 60];
+    }
+    
+    if (seconds > 60 * 60 * 24) {
+        displayString = [NSString stringWithFormat:@"Time saved: %0.2f day", ((seconds / 60.0) / 60) / 24];
+    }
+    
+    [alert setMessageText:displayString];
+    [alert runModal];
 }
 
 - (void)doMenuAction {
@@ -91,9 +121,12 @@
     
     KATimeEstimator *timeEstimator = [[KATimeEstimator alloc] initWithNumberOfProperties:properties.count];
     
+    const NSInteger currentSeconds = [[NSUserDefaults standardUserDefaults] integerForKey:@"seconds_saved"];
+    
     const NSInteger seconds = [timeEstimator estimatedSecondsSaved];
     
-    [[NSUserDefaults standardUserDefaults] setInteger:seconds forKey:@"seconds_saved"];
+    [[NSUserDefaults standardUserDefaults] setInteger:currentSeconds + seconds forKey:@"seconds_saved"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (void)dealloc {

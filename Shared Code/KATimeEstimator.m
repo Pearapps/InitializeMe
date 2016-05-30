@@ -27,7 +27,7 @@
 }
 
 - (NSInteger)estimatedSecondsSaved {
-    return self.numberOfProperties * 4; // 4 seconds per property.
+    return self.numberOfProperties * 4; // 4 seconds per property - probably low, but this is just estimated.
 }
 
 @end
